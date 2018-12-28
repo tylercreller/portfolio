@@ -1,0 +1,57 @@
+import React from 'react';
+import TextLoop from 'react-text-loop';
+
+const Splash = () => {
+	return (
+		<div className="splash">
+			<div className="splash__title" data-aos="fade-in">
+				<div className="splash__title_content">
+					Hello!
+					<br />
+					My name is Tyler
+					<div>
+						I am a...
+						<div>
+							<TextLoop>
+								<div>
+									<a
+										href="https://www.linkedin.com/in/tyler-creller-942484100/"
+										target="_blank"
+									>
+										Web Developer
+									</a>
+								</div>
+								<div>
+									<a
+										href="https://www.instagram.com/p/BqsAgJPgumi/"
+										target="_blank"
+									>
+										Dog Dad
+									</a>
+								</div>
+								<div>
+									<a
+										href="https://www.instagram.com/p/BkApnM5Dz_T/"
+										target="_blank"
+									>
+										Foodie
+									</a>
+								</div>
+								<div>
+									<a
+										href="https://www.instagram.com/p/BlTheP1HL_y/"
+										target="_blank"
+									>
+										Musician
+									</a>
+								</div>
+							</TextLoop>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export default Splash;

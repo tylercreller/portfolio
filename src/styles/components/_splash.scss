@@ -1,0 +1,19 @@
+.splash__title {
+	color: $off-white;
+
+	position: fixed;
+	top: 20%;
+	left: 25%;
+	transform: translate(-50%, -50%);
+}
+
+.splash__title_content {
+	font-size: $gigantic-size;
+	font-family: $font-family-title;
+	text-shadow: $text-shadow;
+
+	a {
+		color: $flat-asphalt;
+		text-shadow: none;
+	}
+}

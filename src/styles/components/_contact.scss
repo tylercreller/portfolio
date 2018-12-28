@@ -1,0 +1,14 @@
+.contact {
+	position: fixed;
+	top: 20%;
+	left: 25%;
+	transform: translate(-50%, -50%);
+}
+
+.contact__header {
+	color: $off-white;
+
+	font-size: $xl-size;
+	font-family: $font-family-title;
+	text-shadow: $text-shadow;
+}
