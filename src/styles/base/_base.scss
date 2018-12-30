@@ -24,17 +24,14 @@ button:disabled {
 	text-shadow: $text-shadow;
 
 	margin-bottom: $l-size;
+	user-select: none;
 }
 
 .is-active-nav {
 	color: $flat-yellow !important;
+	cursor: context-menu !important;
+	pointer-events: none;
 	&::after {
-		content: '' !important;
-		display: block !important;
-		width: 0 !important;
-		height: 2px !important;
-		background: $flat-yellow !important;
-		transition: width 0.3s !important;
 		width: 100% !important;
 	}
 }

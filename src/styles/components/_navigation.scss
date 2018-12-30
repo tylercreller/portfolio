@@ -9,6 +9,8 @@
 	font-size: $m-size;
 	color: white;
 	text-decoration: none;
+	user-select: none;
+
 	&:not(:last-child) {
 		padding-right: $m-size;
 	}
