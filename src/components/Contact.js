@@ -58,7 +58,7 @@ class Contact extends React.Component {
 		return (
 			<Layout>
 				<div className="contact">
-					<div className="contact__header">Let's Chat.</div>
+					<div className="large-text">Let's Chat.</div>
 					<Card className="contact__card">
 						<CardContent>
 							<form noValidate autoComplete="off">

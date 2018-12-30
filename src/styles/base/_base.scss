@@ -15,3 +15,13 @@ button {
 button:disabled {
 	cursor: default;
 }
+
+.large-text {
+	color: $off-white;
+
+	font-size: $gigantic-size;
+	font-family: $font-family-title;
+	text-shadow: $text-shadow;
+
+	margin-bottom: $l-size;
+}

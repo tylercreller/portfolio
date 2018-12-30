@@ -4,7 +4,7 @@
 	user-select: none;
 }
 
-.splash__title_content {
+.splash__title__content {
 	font-size: $gigantic-size;
 	font-family: $font-family-title;
 	text-shadow: $text-shadow;
@@ -24,7 +24,7 @@
 }
 
 @media (max-width: $desktop-breakpoint) {
-	.splash__title_content {
+	.splash__title__content {
 		font-size: $xxl-size;
 	}
 }

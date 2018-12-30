@@ -7,7 +7,7 @@ const Splash = () => {
 		<Layout>
 			<div className="splash">
 				<div className="splash__title">
-					<div className="splash__title_content">
+					<div className="splash__title__content">
 						Hello!
 						<br />
 						My name is <div id="name">Tyler</div>.

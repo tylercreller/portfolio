@@ -1,0 +1,37 @@
+.projects {
+	max-width: $max-content-width;
+}
+
+.projects__gridList__site-title {
+	color: $off-white;
+	font-size: $m-size;
+	font-family: $font-family-content;
+	cursor: context-menu;
+}
+.projects__gridList__site-link {
+	color: $off-white;
+	font-size: $s-size;
+	font-family: $font-family-content;
+	letter-spacing: 1px;
+	&:hover {
+		color: $flat-yellow;
+	}
+}
+
+.projects__gridList__action-link {
+	color: $off-white;
+	font-family: $font-family-content;
+	&:hover {
+		color: $flat-red;
+	}
+}
+
+.MuiGridListTile-tile-4 {
+	border-radius: $xs-size;
+}
+
+@media (max-width: $desktop-breakpoint) {
+	.ProjectsGridList-root-1 {
+		justify-content: space-around;
+	}
+}

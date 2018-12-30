@@ -5,7 +5,9 @@ const Navigation = () => (
 		<a className="navigation__link" href="/">
 			Welcome
 		</a>
-		<a className="navigation__link">Portfolio</a>
+		<a className="navigation__link" href="/projects">
+			Projects
+		</a>
 		<a
 			className="navigation__link"
 			href="https://github.com/tylercreller"

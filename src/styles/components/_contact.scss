@@ -1,4 +1,5 @@
 .contact {
+	max-width: $max-content-width;
 }
 
 .contact__button {
@@ -11,24 +12,7 @@
 	}
 }
 
-.contact__header {
-	color: $off-white;
-
-	font-size: $gigantic-size;
-	font-family: $font-family-title;
-	text-shadow: $text-shadow;
-
-	margin-bottom: $m-size;
-}
-
 .contact__card {
 	margin: 0;
-	max-width: $max-content-width;
 	text-align: initial;
-}
-
-@media (max-width: $desktop-breakpoint) {
-	.contact__card {
-		margin: 0 $m-size;
-	}
 }

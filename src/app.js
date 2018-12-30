@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 import Splash from './components/Splash';
 import Contact from './components/Contact';
 import NotFoundPage from './components/NotFoundPage';
+import Projects from './components/Projects';
 
 import './styles/styles.scss';
 AOS.init();
@@ -36,6 +37,7 @@ const routes = (
 		<Switch>
 			<Route path="/" component={Splash} exact={true} />
 			<Route path="/contact" component={Contact} />
+			<Route path="/projects" component={Projects} />
 			<Route component={NotFoundPage} />
 		</Switch>
 	</BrowserRouter>
