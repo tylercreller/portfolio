@@ -4,20 +4,26 @@ import { withStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
 import gridListData from '../data/gridListData';
 
-const styles = theme => ({
+const styles = () => ({
 	root: {
 		display: 'flex',
 		flexWrap: 'wrap',
-		justifyContent: '',
 		overflow: 'hidden',
 		backgroundColor: 'initial'
+	},
+	button: {
+		'&:hover': {
+			backgroundColor: 'transparent'
+		}
 	}
 });
+
+function navigateToLink(link) {
+	window.open(link, '_blank');
+}
 
 function ProjectsGridList(props) {
 	const { classes } = props;
@@ -28,18 +34,22 @@ function ProjectsGridList(props) {
 			<div className={classes.root}>
 				<GridList cellHeight={180}>
 					{gridListData.map(tile => (
-						<GridListTile key={tile.img}>
-							<img src={tile.img} alt={tile.title} />
+						<GridListTile key={tile.img} className="projects__gridList__tile">
+							<img
+								src={tile.img}
+								alt={tile.title}
+								onClick={navigateToLink.bind(this, tile.site)}
+							/>
 							<GridListTileBar
 								title={
-									<div className="projects__gridList__site-title">
+									<div className="projects__gridList__tile__site-title">
 										{tile.title}
 									</div>
 								}
 								subtitle={
 									<span>
 										<a
-											className="projects__gridList__site-link"
+											className="projects__gridList__tile__site-link"
 											href={tile.site}
 											target="_blank"
 										>
@@ -48,17 +58,20 @@ function ProjectsGridList(props) {
 									</span>
 								}
 								actionIcon={
-									tile.actionLink && (
-										<IconButton>
+									<IconButton className={classes.button} disableRipple>
+										{tile.actionLink && (
 											<a
-												className="projects__gridList__action-link"
+												className="projects__gridList__tile__action-link"
 												href={tile.actionLink}
 												target="_blank"
 											>
-												<i className="fab fa-github fa-2x" />
+												<i className="fab fa-github fa-3x" />
 											</a>
-										</IconButton>
-									)
+										)}
+										<div className="projects__gridList__tile__tech">
+											{tile.tech}
+										</div>
+									</IconButton>
 								}
 							/>
 						</GridListTile>

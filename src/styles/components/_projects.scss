@@ -3,13 +3,13 @@
 	transform: translate(-50%, -50%);
 }
 
-.projects__gridList__site-title {
+.projects__gridList__tile__site-title {
 	color: $off-white;
 	font-size: $m-size;
 	font-family: $font-family-content;
 	cursor: context-menu;
 }
-.projects__gridList__site-link {
+.projects__gridList__tile__site-link {
 	color: $off-white;
 	font-size: $s-size;
 	font-family: $font-family-content;
@@ -19,7 +19,7 @@
 	}
 }
 
-.projects__gridList__action-link {
+.projects__gridList__tile__action-link {
 	color: $off-white;
 	font-family: $font-family-content;
 	&:hover {
@@ -27,12 +27,18 @@
 	}
 }
 
-.MuiGridListTile-tile-4 {
-	border-radius: $xs-size;
+.projects__gridList__tile__tech {
+	color: $off-white;
+	padding-left: $xs-size;
+	&:hover {
+		cursor: context-menu;
+	}
 }
 
-@media (max-width: $desktop-breakpoint) {
-	.ProjectsGridList-root-1 {
-		justify-content: space-around;
+.projects__gridList__tile > div {
+	border-radius: $xs-size;
+
+	> img:hover {
+		cursor: pointer;
 	}
 }
