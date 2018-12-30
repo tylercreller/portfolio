@@ -74,7 +74,7 @@ class Contact extends React.Component {
 		window.grecaptcha.render('g-recaptcha', {
 			sitekey: '6LdFpYUUAAAAACLipDGv8ETlRDGyxCYjSbMFUVMy',
 			callback: recaptchaSuccess,
-			expiredCallback: recaptchaExpired
+			'expired-callback': recaptchaExpired
 		});
 	};
 
