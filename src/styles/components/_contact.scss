@@ -5,6 +5,16 @@
 	transform: translate(-50%, -50%);
 }
 
+.contact__button {
+	background: $off-white !important;
+	border-bottom: $bezel-effect-white !important;
+
+	&:hover {
+		background: darken($off-white, 20%) !important;
+		border-bottom: darken($off-white, 100%) !important;
+	}
+}
+
 .contact__header {
 	color: $off-white;
 

@@ -1,10 +1,9 @@
 .splash__title {
 	color: $off-white;
-
-	position: fixed;
-	top: 20%;
-	left: 25%;
 	transform: translate(-50%, -50%);
+	cursor: context-menu;
+	user-select: none;
+	padding: 5% 5% 0 20%;
 }
 
 .splash__title_content {
@@ -13,7 +12,25 @@
 	text-shadow: $text-shadow;
 
 	a {
-		color: $flat-asphalt;
-		text-shadow: none;
+		color: $flat-yellow;
+	}
+}
+
+#name {
+	display: inline;
+	color: $flat-yellow;
+}
+
+.splash__title__content__loop > div > div > div {
+	white-space: normal;
+}
+
+@media (max-width: $desktop-breakpoint) {
+	.splash__title {
+		padding: 20% 0 0 0;
+		text-align: center;
+	}
+	.splash__title_content {
+		font-size: $xxl-size;
 	}
 }

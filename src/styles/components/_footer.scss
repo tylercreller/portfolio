@@ -1,0 +1,15 @@
+.footer {
+	font-family: $font-family-content;
+	text-align: center;
+	color: white;
+	font-size: $s-size;
+
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.footer__content {
+	padding: $xs-size 0;
+}

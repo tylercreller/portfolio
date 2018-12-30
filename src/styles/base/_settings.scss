@@ -1,14 +1,16 @@
 // Color
 $off-white: #ecf0f1;
-$flat-asphalt: #2c3e50;
-$flat-red: #c0392b;
-$flat-blue: #3498db;
+$flat-red: #f4032f;
+$flat-blue: #03a9f4;
+$flat-yellow: #f4c803;
 
 // Spacing
+$xs-size: 1rem;
 $s-size: 1.2rem;
 $m-size: 1.6rem;
 $l-size: 3.2rem;
 $xl-size: 4.8rem;
+$xxl-size: 6.4rem;
 $gigantic-size: 10rem;
 $desktop-breakpoint: 45rem;
 
@@ -18,4 +20,5 @@ $font-family-title: 'Fredoka One', sans-serif;
 
 // Effects
 $bezel-effect-blue: 0.3rem solid darken($flat-blue, 20%);
+$bezel-effect-white: 0.3rem solid darken($off-white, 10%);
 $text-shadow: 0.6rem 0.6rem 0 darken($flat-blue, 10%);

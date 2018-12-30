@@ -8,17 +8,17 @@ const Splash = () => {
 				<div className="splash__title_content">
 					Hello!
 					<br />
-					My name is Tyler
+					My name is <div id="name">Tyler</div>.
 					<div>
 						I am a...
-						<div>
+						<div className="splash__title__content__loop">
 							<TextLoop>
 								<div>
 									<a
 										href="https://www.linkedin.com/in/tyler-creller-942484100/"
 										target="_blank"
 									>
-										Web Developer
+										<div>Web Developer</div>
 									</a>
 								</div>
 								<div>

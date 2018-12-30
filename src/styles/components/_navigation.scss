@@ -1,0 +1,40 @@
+.navigation {
+	display: flex;
+	// justify-content: flex-end;
+	padding: $m-size $l-size $m-size 20%;
+}
+.navigation__link {
+	font-family: $font-family-content;
+	font-weight: 1000;
+	letter-spacing: 2px;
+	font-size: $m-size;
+	color: white;
+	text-decoration: none;
+	&:not(:last-child) {
+		padding-right: $m-size;
+	}
+	&:hover {
+		color: $flat-yellow;
+		cursor: pointer;
+	}
+	&::after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 2px;
+		background: $flat-yellow;
+		transition: width 0.3s;
+	}
+
+	&:hover::after {
+		width: 100%;
+		cursor: pointer;
+	}
+}
+
+@media (max-width: $desktop-breakpoint) {
+	.navigation {
+		padding: $m-size 0;
+		justify-content: center;
+	}
+}
