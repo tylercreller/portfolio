@@ -57,10 +57,10 @@ class Contact extends React.Component {
 		const { classes } = this.props;
 		return (
 			<Layout>
-				<div className="contact" data-aos="fade-in">
-					<Card>
+				<div className="contact">
+					<div className="contact__header">Let's Chat.</div>
+					<Card className="contact__card">
 						<CardContent>
-							<div className="contact__header">Let's Chat.</div>
 							<form noValidate autoComplete="off">
 								<TextField
 									id="outlined-name"

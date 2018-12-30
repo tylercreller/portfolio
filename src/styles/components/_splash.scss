@@ -1,9 +1,7 @@
 .splash__title {
 	color: $off-white;
-	transform: translate(-50%, -50%);
 	cursor: context-menu;
 	user-select: none;
-	padding: 5% 5% 0 20%;
 }
 
 .splash__title_content {
@@ -26,10 +24,6 @@
 }
 
 @media (max-width: $desktop-breakpoint) {
-	.splash__title {
-		padding: 10% 0 0 0;
-		text-align: center;
-	}
 	.splash__title_content {
 		font-size: $xxl-size;
 	}

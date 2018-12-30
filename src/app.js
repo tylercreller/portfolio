@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'normalize.css/normalize.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Splash from './components/Splash';
 import Contact from './components/Contact';
+import NotFoundPage from './components/NotFoundPage';
 
 import './styles/styles.scss';
 AOS.init();
@@ -32,10 +33,11 @@ AOS.init({
 
 const routes = (
 	<BrowserRouter>
-		<div>
+		<Switch>
 			<Route path="/" component={Splash} exact={true} />
 			<Route path="/contact" component={Contact} />
-		</div>
+			<Route component={NotFoundPage} />
+		</Switch>
 	</BrowserRouter>
 );
 

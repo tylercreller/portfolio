@@ -1,0 +1,11 @@
+.container {
+	transform: translate(-50%, -50%);
+	padding: 5% 5% 0 20%;
+}
+
+@media (max-width: $desktop-breakpoint) {
+	.container {
+		padding: 10% 0 0 0;
+		text-align: center;
+	}
+}

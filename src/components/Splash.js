@@ -6,7 +6,7 @@ const Splash = () => {
 	return (
 		<Layout>
 			<div className="splash">
-				<div className="splash__title" data-aos="fade-in">
+				<div className="splash__title">
 					<div className="splash__title_content">
 						Hello!
 						<br />
