@@ -2,6 +2,9 @@ import React from 'react';
 
 const Navigation = () => (
 	<div className="navigation">
+		<a className="navigation__link" href="/">
+			Welcome
+		</a>
 		<a className="navigation__link">Portfolio</a>
 		<a
 			className="navigation__link"
@@ -17,7 +20,9 @@ const Navigation = () => (
 		>
 			LinkedIn
 		</a>
-		<a className="navigation__link">Contact</a>
+		<a className="navigation__link" href="/contact">
+			Contact
+		</a>
 	</div>
 );
 

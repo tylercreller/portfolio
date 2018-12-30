@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import 'normalize.css/normalize.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import PortfolioApp from './components/PortfolioApp';
+import Splash from './components/Splash';
+import Contact from './components/Contact';
 
 import './styles/styles.scss';
 AOS.init();
@@ -28,4 +30,13 @@ AOS.init({
 	anchorPlacement: 'top-bottom' // defines which position of the element regarding to window should trigger the animation
 });
 
-ReactDOM.render(<PortfolioApp />, document.getElementById('app'));
+const routes = (
+	<BrowserRouter>
+		<div>
+			<Route path="/" component={Splash} exact={true} />
+			<Route path="/contact" component={Contact} />
+		</div>
+	</BrowserRouter>
+);
+
+ReactDOM.render(routes, document.getElementById('app'));
