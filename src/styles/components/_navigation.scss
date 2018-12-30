@@ -33,6 +33,15 @@
 	}
 }
 
+.navigation__link-active {
+	color: $flat-yellow !important;
+	cursor: context-menu !important;
+	pointer-events: none;
+	&::after {
+		width: 100% !important;
+	}
+}
+
 @media (max-width: $desktop-breakpoint) {
 	.navigation {
 		padding: $m-size 0;

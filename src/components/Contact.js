@@ -6,24 +6,13 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import Swal from 'sweetalert2';
 
 const styles = theme => ({
-	container: {
-		display: 'flex',
-		flexWrap: 'wrap'
-	},
-	textField: {
-		marginLeft: theme.spacing.unit,
-		marginRight: theme.spacing.unit
-	},
-	applyMargin: {
-		marginLeft: theme.spacing.unit
-	},
-	dense: {
-		marginTop: 16
-	},
-	menu: {
-		width: 200
+	contactTextField: {
+		// marginLeft: theme.spacing.unit,
+		marginRight: theme.spacing.unit,
+		marginBottom: 0
 	}
 });
 
@@ -31,19 +20,48 @@ class Contact extends React.Component {
 	state = {
 		reply_to: '',
 		from_name: '',
-		message_html: ''
+		message_html: '',
+		isDirty: false,
+		validCaptcha: false
 	};
 
 	sendEmail = () => {
-		var template_params = {
-			from_name: this.state.from_name,
-			reply_to: this.state.reply_to,
-			message_html: this.state.message_html
-		};
+		this.setState({
+			isDirty: true
+		});
+		if (
+			this.state.from_name !== '' &&
+			this.state.reply_to !== '' &&
+			this.state.message_html !== ''
+		) {
+			if (this.state.validCaptcha) {
+				var template_params = {
+					from_name: this.state.from_name,
+					reply_to: this.state.reply_to,
+					message_html: this.state.message_html
+				};
 
-		var service_id = 'default_service';
-		var template_id = 'portfolio_contact_2';
-		emailjs.send(service_id, template_id, template_params);
+				var service_id = 'default_service';
+				var template_id = 'portfolio_contact_2';
+				emailjs.send(service_id, template_id, template_params);
+
+				Swal('Sent!', 'Thanks for reaching out.', 'success');
+			} else {
+				Swal('Oops', 'You must complete the CAPTCHA', 'error');
+			}
+		}
+	};
+
+	recaptchaSuccess = () => {
+		this.setState({
+			validCaptcha: true
+		});
+	};
+
+	recaptchaExpired = () => {
+		this.setState({
+			validCaptcha: false
+		});
 	};
 
 	handleChange = id => event => {
@@ -52,19 +70,48 @@ class Contact extends React.Component {
 		});
 	};
 
+	renderCaptcha = () => {
+		window.grecaptcha.render('g-recaptcha', {
+			sitekey: '6LdFpYUUAAAAACLipDGv8ETlRDGyxCYjSbMFUVMy',
+			callback: recaptchaSuccess,
+			expiredCallback: recaptchaExpired
+		});
+	};
+
+	componentDidMount() {
+		window.recaptchaSuccess = this.recaptchaSuccess;
+		window.recaptchaExpired = this.recaptchaExpired;
+
+		if (!window.grecaptcha || !window.grecaptcha.render) {
+			setTimeout(() => {
+				this.renderCaptcha();
+			}, 500);
+		} else {
+			this.renderCaptcha();
+		}
+	}
+
 	render() {
 		const { classes } = this.props;
 		return (
 			<div className="contact" data-aos="fade-in">
-				<div className="large-text">Let's Chat.</div>
+				<div className="large-text">
+					Let's <div className="large-text--yellow">Chat</div>.
+				</div>
 				<Card className="contact__card">
-					<CardContent>
+					<CardContent className="contact__card__content">
 						<form noValidate autoComplete="off">
 							<TextField
 								id="outlined-name"
 								label="Name"
-								className={classes.textField}
+								className={classes.contactTextField}
 								value={this.state.from_name}
+								error={this.state.from_name === '' && this.state.isDirty}
+								helperText={
+									this.state.from_name === '' && this.state.isDirty
+										? 'Required'
+										: ''
+								}
 								onChange={this.handleChange('from_name')}
 								margin="normal"
 								variant="outlined"
@@ -74,9 +121,14 @@ class Contact extends React.Component {
 							<TextField
 								id="outlined-email-input"
 								label="Email"
-								className="form-input"
-								className={classes.textField}
+								className={classes.contactTextField}
 								value={this.state.reply_to}
+								error={this.state.reply_to === '' && this.state.isDirty}
+								helperText={
+									this.state.reply_to === '' && this.state.isDirty
+										? 'Required'
+										: ''
+								}
 								onChange={this.handleChange('reply_to')}
 								type="email"
 								name="email"
@@ -84,15 +136,21 @@ class Contact extends React.Component {
 								margin="normal"
 								variant="outlined"
 								required
-								style={{ width: '65%' }}
+								style={{ width: '67%' }}
 							/>
 							<TextField
 								id="outlined-multiline-static"
 								label="Message"
 								multiline
 								rows="8"
-								className={classes.textField}
+								className={classes.contactTextField}
 								value={this.state.message_html}
+								error={this.state.message_html === '' && this.state.isDirty}
+								helperText={
+									this.state.message_html === '' && this.state.isDirty
+										? 'Required'
+										: ''
+								}
 								onChange={this.handleChange('message_html')}
 								margin="normal"
 								variant="outlined"
@@ -106,14 +164,11 @@ class Contact extends React.Component {
 						</form>
 					</CardContent>
 					<CardActions>
-						<div
-							className={[classes.applyMargin, 'g-recaptcha'].join(' ')}
-							data-sitekey="6LdFpYUUAAAAACLipDGv8ETlRDGyxCYjSbMFUVMy"
-						/>
+						<div id="g-recaptcha" className="g-recaptcha" />
 					</CardActions>
 					<CardActions>
 						<Button
-							className={[classes.applyMargin, 'contact__button'].join(' ')}
+							className="contact__button"
 							size="large"
 							onClick={this.sendEmail}
 						>

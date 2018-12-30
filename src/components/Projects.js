@@ -65,7 +65,10 @@ function ProjectsGridList(props) {
 												href={tile.actionLink}
 												target="_blank"
 											>
-												<i className="fab fa-github fa-3x" />
+												<i
+													className="fab fa-github fa-3x"
+													title="View on GitHub"
+												/>
 											</a>
 										)}
 										<div className="projects__gridList__tile__tech">

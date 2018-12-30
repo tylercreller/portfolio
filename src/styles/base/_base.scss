@@ -27,11 +27,11 @@ button:disabled {
 	user-select: none;
 }
 
-.is-active-nav {
-	color: $flat-yellow !important;
-	cursor: context-menu !important;
-	pointer-events: none;
-	&::after {
-		width: 100% !important;
-	}
+.large-text--yellow {
+	color: $flat-yellow;
+	display: inline;
+}
+
+.swal2-popup {
+	font-size: 1.6rem !important;
 }

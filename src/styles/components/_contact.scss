@@ -4,16 +4,41 @@
 }
 
 .contact__button {
-	background: $off-white !important;
-	border-bottom: $bezel-effect-white !important;
+	background: $flat-blue !important;
+	border-bottom: $bezel-effect-blue !important;
+	margin-bottom: $m-size !important;
 
 	&:hover {
-		background: darken($off-white, 20%) !important;
-		border-bottom: darken($off-white, 100%) !important;
+		background: darken($flat-blue, 20%) !important;
+		border-bottom: darken($flat-blue, 100%) !important;
 	}
 }
 
 .contact__card {
 	margin: 0;
 	text-align: initial;
+	border-radius: $s-size !important;
+}
+
+.contact__card__content {
+	padding: $xs-size $m-size !important;
+}
+
+form {
+	> div > label,
+	#outlined-name,
+	#outlined-email-input,
+	#outlined-multiline-static {
+		font-family: $font-family-content !important;
+		font-size: $m-size !important;
+		line-height: $m-size;
+	}
+
+	#outlined-name-helper-text,
+	#outlined-email-input-helper-text,
+	#outlined-multiline-static-helper-text {
+		font-family: $font-family-content !important;
+		font-size: $s-size !important;
+		color: $flat-red;
+	}
 }

@@ -5,7 +5,7 @@ const Navigation = () => (
 	<div className="navigation">
 		<NavLink
 			className="navigation__link"
-			activeClassName="is-active-nav"
+			activeClassName="navigation__link-active"
 			to="/"
 			exact={true}
 		>
@@ -13,7 +13,7 @@ const Navigation = () => (
 		</NavLink>
 		<NavLink
 			className="navigation__link"
-			activeClassName="is-active-nav"
+			activeClassName="navigation__link-active"
 			to="/projects"
 		>
 			Projects
@@ -34,7 +34,7 @@ const Navigation = () => (
 		</a>
 		<NavLink
 			className="navigation__link"
-			activeClassName="is-active-nav"
+			activeClassName="navigation__link-active"
 			to="/contact"
 		>
 			Contact
