@@ -9,7 +9,8 @@
 		"build:dev": "webpack",
 		"build:prod": "webpack -p --env production",
 		"dev-server": "webpack-dev-server",
-		"start": "node server/server.js"
+		"start": "node server/server.js",
+		"heroku-postbuild": "yarn run build:prod"
 	},
 	"dependencies": {
 		"@material-ui/core": "^3.7.1",
