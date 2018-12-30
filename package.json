@@ -6,8 +6,10 @@
 	"license": "MIT",
 	"scripts": {
 		"serve": "live-server public/",
-		"build": "webpack",
-		"dev-server": "webpack-dev-server"
+		"build:dev": "webpack",
+		"build:prod": "webpack -p --env production",
+		"dev-server": "webpack-dev-server",
+		"start": "node server/server.js"
 	},
 	"dependencies": {
 		"@material-ui/core": "^3.7.1",
@@ -19,6 +21,8 @@
 		"babel-preset-env": "1.5.2",
 		"babel-preset-react": "6.24.1",
 		"css-loader": "0.28.4",
+		"express": "4.15.4",
+		"extract-text-webpack-plugin": "3.0.0",
 		"file-loader": "^3.0.1",
 		"jquery": "^3.3.1",
 		"live-server": "^1.2.1",

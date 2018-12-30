@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'normalize.css/normalize.css';
 import AOS from 'aos';
+import 'normalize.css/normalize.css';
 import 'aos/dist/aos.css';
-import Layout from './components/Layout';
-
 import './styles/styles.scss';
+
+import Layout from './components/Layout';
 AOS.init();
 AOS.init({
 	// Global settings:
