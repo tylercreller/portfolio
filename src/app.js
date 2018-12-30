@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'normalize.css/normalize.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Splash from './components/Splash';
-import Contact from './components/Contact';
-import NotFoundPage from './components/NotFoundPage';
-import Projects from './components/Projects';
+import Layout from './components/Layout';
 
 import './styles/styles.scss';
 AOS.init();
@@ -32,15 +28,4 @@ AOS.init({
 	anchorPlacement: 'top-bottom' // defines which position of the element regarding to window should trigger the animation
 });
 
-const routes = (
-	<BrowserRouter>
-		<Switch>
-			<Route path="/" component={Splash} exact={true} />
-			<Route path="/contact" component={Contact} />
-			<Route path="/projects" component={Projects} />
-			<Route component={NotFoundPage} />
-		</Switch>
-	</BrowserRouter>
-);
-
-ReactDOM.render(routes, document.getElementById('app'));
+ReactDOM.render(<Layout />, document.getElementById('app'));

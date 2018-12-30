@@ -1,13 +1,23 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navigation = () => (
 	<div className="navigation">
-		<a className="navigation__link" href="/">
+		<NavLink
+			className="navigation__link"
+			activeClassName="is-active-nav"
+			to="/"
+			exact={true}
+		>
 			Welcome
-		</a>
-		<a className="navigation__link" href="/projects">
+		</NavLink>
+		<NavLink
+			className="navigation__link"
+			activeClassName="is-active-nav"
+			to="/projects"
+		>
 			Projects
-		</a>
+		</NavLink>
 		<a
 			className="navigation__link"
 			href="https://github.com/tylercreller"
@@ -22,9 +32,13 @@ const Navigation = () => (
 		>
 			LinkedIn
 		</a>
-		<a className="navigation__link" href="/contact">
+		<NavLink
+			className="navigation__link"
+			activeClassName="is-active-nav"
+			to="/contact"
+		>
 			Contact
-		</a>
+		</NavLink>
 	</div>
 );
 

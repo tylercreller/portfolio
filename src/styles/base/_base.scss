@@ -25,3 +25,16 @@ button:disabled {
 
 	margin-bottom: $l-size;
 }
+
+.is-active-nav {
+	color: $flat-yellow !important;
+	&::after {
+		content: '' !important;
+		display: block !important;
+		width: 0 !important;
+		height: 2px !important;
+		background: $flat-yellow !important;
+		transition: width 0.3s !important;
+		width: 100% !important;
+	}
+}

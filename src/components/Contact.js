@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from './Layout';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -56,75 +55,73 @@ class Contact extends React.Component {
 	render() {
 		const { classes } = this.props;
 		return (
-			<Layout>
-				<div className="contact">
-					<div className="large-text">Let's Chat.</div>
-					<Card className="contact__card">
-						<CardContent>
-							<form noValidate autoComplete="off">
-								<TextField
-									id="outlined-name"
-									label="Name"
-									className={classes.textField}
-									value={this.state.from_name}
-									onChange={this.handleChange('from_name')}
-									margin="normal"
-									variant="outlined"
-									required
-									style={{ width: '28%' }}
-								/>
-								<TextField
-									id="outlined-email-input"
-									label="Email"
-									className="form-input"
-									className={classes.textField}
-									value={this.state.reply_to}
-									onChange={this.handleChange('reply_to')}
-									type="email"
-									name="email"
-									autoComplete="email"
-									margin="normal"
-									variant="outlined"
-									required
-									style={{ width: '65%' }}
-								/>
-								<TextField
-									id="outlined-multiline-static"
-									label="Message"
-									multiline
-									rows="8"
-									className={classes.textField}
-									value={this.state.message_html}
-									onChange={this.handleChange('message_html')}
-									margin="normal"
-									variant="outlined"
-									fullWidth
-									InputLabelProps={{
-										shrink: true
-									}}
-									required
-									style={{ width: '96%' }}
-								/>
-							</form>
-						</CardContent>
-						<CardActions>
-							<div
-								className={[classes.applyMargin, 'g-recaptcha'].join(' ')}
-								data-sitekey="6LdFpYUUAAAAACLipDGv8ETlRDGyxCYjSbMFUVMy"
+			<div className="contact" data-aos="fade-in">
+				<div className="large-text">Let's Chat.</div>
+				<Card className="contact__card">
+					<CardContent>
+						<form noValidate autoComplete="off">
+							<TextField
+								id="outlined-name"
+								label="Name"
+								className={classes.textField}
+								value={this.state.from_name}
+								onChange={this.handleChange('from_name')}
+								margin="normal"
+								variant="outlined"
+								required
+								style={{ width: '28%' }}
 							/>
-						</CardActions>
-						<CardActions>
-							<Button
-								className={[classes.applyMargin, 'contact__button'].join(' ')}
-								size="large"
-								onClick={this.sendEmail}
-							>
-								Send
-							</Button>
-						</CardActions>
-					</Card>
-				</div>
-			</Layout>
+							<TextField
+								id="outlined-email-input"
+								label="Email"
+								className="form-input"
+								className={classes.textField}
+								value={this.state.reply_to}
+								onChange={this.handleChange('reply_to')}
+								type="email"
+								name="email"
+								autoComplete="email"
+								margin="normal"
+								variant="outlined"
+								required
+								style={{ width: '65%' }}
+							/>
+							<TextField
+								id="outlined-multiline-static"
+								label="Message"
+								multiline
+								rows="8"
+								className={classes.textField}
+								value={this.state.message_html}
+								onChange={this.handleChange('message_html')}
+								margin="normal"
+								variant="outlined"
+								fullWidth
+								InputLabelProps={{
+									shrink: true
+								}}
+								required
+								style={{ width: '96%' }}
+							/>
+						</form>
+					</CardContent>
+					<CardActions>
+						<div
+							className={[classes.applyMargin, 'g-recaptcha'].join(' ')}
+							data-sitekey="6LdFpYUUAAAAACLipDGv8ETlRDGyxCYjSbMFUVMy"
+						/>
+					</CardActions>
+					<CardActions>
+						<Button
+							className={[classes.applyMargin, 'contact__button'].join(' ')}
+							size="large"
+							onClick={this.sendEmail}
+						>
+							Send
+						</Button>
+					</CardActions>
+				</Card>
+			</div>
 		);
 	}
 }
