@@ -1,7 +1,7 @@
 .footer {
 	font-family: $font-family-content;
 	text-align: center;
-	color: white;
+	color: $off-white;
 	font-size: $s-size;
 
 	position: absolute;
@@ -12,4 +12,12 @@
 
 .footer__content {
 	padding: $xs-size 0;
+
+	> a {
+		color: $off-white;
+		font-family: $font-family-content;
+		&:hover {
+			color: $flat-yellow;
+		}
+	}
 }
