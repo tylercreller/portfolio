@@ -4,7 +4,7 @@
 
 @media (max-width: $desktop-breakpoint) {
 	.container {
-		padding: $xs-size;
+		padding: $xs-size $xs-size $xl-size $xs-size;
 		text-align: center;
 		margin: 0 auto $xxl-size;
 	}
