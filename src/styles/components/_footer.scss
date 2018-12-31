@@ -8,6 +8,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	padding: 1rem;
 }
 
 .footer__content {
@@ -22,9 +23,9 @@
 	}
 }
 
-@media (max-height: $desktop-breakpoint + $l-size) {
-	.footer {
-		position: relative;
-		margin-top: $l-size;
-	}
-}
+// @media screen and (max-height: $desktop-breakpoint) {
+// 	.footer {
+// 		position: relative;
+// 		margin-top: $l-size;
+// 	}
+// }

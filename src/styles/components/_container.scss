@@ -1,12 +1,11 @@
 .container {
 	padding: $xl-size 20% 0 20%;
-	min-height: $desktop-breakpoint + 10rem;
 }
 
 @media (max-width: $desktop-breakpoint) {
 	.container {
-		padding: $xs-size 0 0 0;
+		padding: $xs-size 0 $xxl-size 0;
 		text-align: center;
-		margin: 0 $m-size;
+		margin: 0 auto;
 	}
 }

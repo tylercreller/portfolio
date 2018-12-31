@@ -45,7 +45,7 @@
 
 @media (max-width: $desktop-breakpoint) {
 	.navigation {
-		padding: $m-size 0;
+		padding: $m-size $s-size;
 		justify-content: center;
 	}
 

@@ -7,7 +7,10 @@ body {
 	background-color: $flat-blue;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: $m-size;
-	height: 100%;
+
+	position: relative;
+	margin: 0;
+	min-height: 100%;
 }
 
 #app {
