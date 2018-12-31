@@ -6,7 +6,8 @@
 .contact__button {
 	background: $flat-blue !important;
 	border-bottom: $bezel-effect-blue !important;
-	margin-bottom: $m-size !important;
+	margin: $m-size 0 0 0 !important;
+	min-width: $gigantic-size !important;
 
 	&:hover {
 		background: darken($flat-blue, 20%) !important;
@@ -18,10 +19,15 @@
 	margin: 0;
 	text-align: initial;
 	border-radius: $s-size !important;
+	padding: $xs-size $m-size $m-size $m-size;
 }
 
 .contact__card__content {
-	padding: $xs-size $m-size !important;
+	padding: $xs-size $s-size !important;
+}
+
+.contact__card__content__grid__item {
+	padding: $s-size $s-size $s-size 0 !important;
 }
 
 form {
@@ -40,5 +46,40 @@ form {
 		font-family: $font-family-content !important;
 		font-size: $s-size !important;
 		color: $flat-red;
+	}
+}
+
+.g-recaptcha {
+	margin: $xs-size 0 0 0 !important;
+}
+
+@media screen and (max-width: $desktop-breakpoint - $gigantic-size) {
+	#rc-imageselect,
+	.g-recaptcha {
+		transform: scale(0.77);
+		transform-origin: 0 0;
+	}
+	.contact__button {
+		width: 100%;
+		margin: 0 !important;
+	}
+	.contact__card__content__grid__item {
+		padding: $xs-size 0 !important;
+	}
+
+	form {
+		> div > label,
+		#outlined-name,
+		#outlined-email-input,
+		#outlined-multiline-static {
+			font-size: $xs-size !important;
+			line-height: $xs-size;
+		}
+
+		#outlined-name-helper-text,
+		#outlined-email-input-helper-text,
+		#outlined-multiline-static-helper-text {
+			font-size: $xs-size !important;
+		}
 	}
 }

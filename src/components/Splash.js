@@ -5,10 +5,14 @@ const Splash = () => {
 	return (
 		<div className="splash" data-aos="fade-in">
 			<div className="splash__title">
-				<div className="splash__title__content">
+				<div className="splash__title__content large-text">
 					Hello!
 					<br />
-					My name is <div id="name">Tyler</div>.
+					My name is{' '}
+					<div id="name" className="large-text--yellow">
+						Tyler
+					</div>
+					.
 					<div>
 						I am a...
 						<div className="splash__title__content__loop">

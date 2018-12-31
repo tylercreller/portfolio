@@ -8,27 +8,6 @@
 	user-select: none;
 }
 
-.splash__title__content {
-	font-size: $gigantic-size;
-	font-family: $font-family-title;
-	text-shadow: $text-shadow;
-
-	a {
-		color: $flat-yellow;
-	}
-}
-
-#name {
-	display: inline;
-	color: $flat-yellow;
-}
-
 .splash__title__content__loop > div > div > div {
 	white-space: normal;
-}
-
-@media (max-width: $desktop-breakpoint) {
-	.splash__title__content {
-		font-size: $xxl-size;
-	}
 }

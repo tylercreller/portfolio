@@ -13,7 +13,7 @@
 	color: $off-white;
 	font-size: $s-size;
 	font-family: $font-family-content;
-	letter-spacing: 1px;
+	letter-spacing: 0.1rem;
 	&:hover {
 		color: $flat-yellow;
 	}
@@ -40,5 +40,11 @@
 
 	> img:hover {
 		cursor: pointer;
+	}
+}
+
+@media screen and (max-width: $desktop-breakpoint - $gigantic-size) {
+	.projects__gridList__tile {
+		width: 100% !important;
 	}
 }

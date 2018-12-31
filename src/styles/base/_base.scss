@@ -1,11 +1,17 @@
 html {
 	font-size: 62.5%;
+	height: 100%;
 }
 
 body {
 	background-color: $flat-blue;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: $m-size;
+	height: 100%;
+}
+
+#app {
+	height: 100%;
 }
 
 button {
@@ -25,6 +31,10 @@ button:disabled {
 
 	margin-bottom: $l-size;
 	user-select: none;
+
+	a {
+		color: $flat-yellow;
+	}
 }
 
 .large-text--yellow {
@@ -34,4 +44,17 @@ button:disabled {
 
 .swal2-popup {
 	font-size: 1.6rem !important;
+}
+
+@media (max-width: $desktop-breakpoint) {
+	.large-text {
+		font-size: $xxl-size;
+	}
+}
+
+@media (max-width: $small-phone-breakpoint) {
+	.large-text {
+		font-size: $xl-size;
+		margin-bottom: $m-size;
+	}
 }

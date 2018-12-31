@@ -9,7 +9,7 @@ const Navigation = () => (
 			to="/"
 			exact={true}
 		>
-			Welcome
+			Home
 		</NavLink>
 		<NavLink
 			className="navigation__link"

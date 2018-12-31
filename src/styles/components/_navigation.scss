@@ -1,11 +1,12 @@
 .navigation {
 	display: flex;
+	flex-wrap: wrap;
 	padding: $m-size $l-size $m-size 20%;
 }
 .navigation__link {
 	font-family: $font-family-content;
 	font-weight: 1000;
-	letter-spacing: 2px;
+	letter-spacing: 0.2rem;
 	font-size: $m-size;
 	color: white;
 	text-decoration: none;
@@ -22,7 +23,7 @@
 		content: '';
 		display: block;
 		width: 0;
-		height: 2px;
+		height: 0.2rem;
 		background: $flat-yellow;
 		transition: width 0.3s;
 	}
@@ -46,5 +47,9 @@
 	.navigation {
 		padding: $m-size 0;
 		justify-content: center;
+	}
+
+	.navigation__link:not(:last-child) {
+		padding-bottom: $s-size;
 	}
 }

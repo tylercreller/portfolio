@@ -1,5 +1,6 @@
 .container {
-	padding: 5% 5% 0 20%;
+	padding: 5% 10% 0 20%;
+	min-height: $desktop-breakpoint + 5rem;
 }
 
 @media (max-width: $desktop-breakpoint) {

@@ -41,6 +41,7 @@ function ProjectsGridList(props) {
 								onClick={navigateToLink.bind(this, tile.site)}
 							/>
 							<GridListTileBar
+								className="projects__gridList__tile__bar"
 								title={
 									<div className="projects__gridList__tile__site-title">
 										{tile.title}

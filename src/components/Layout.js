@@ -12,7 +12,7 @@ export default class Layout extends React.Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<div>
+				<div style={{ height: '100%' }}>
 					<Navigation />
 					<Container>
 						<Switch>

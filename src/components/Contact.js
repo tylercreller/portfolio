@@ -6,13 +6,15 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
 import Swal from 'sweetalert2';
 
 const styles = theme => ({
 	contactTextField: {
-		// marginLeft: theme.spacing.unit,
 		marginRight: theme.spacing.unit,
-		marginBottom: 0
+		marginBottom: 0,
+		marginTop: 0,
+		width: '100%'
 	}
 });
 
@@ -101,80 +103,99 @@ class Contact extends React.Component {
 				<Card className="contact__card">
 					<CardContent className="contact__card__content">
 						<form noValidate autoComplete="off">
-							<TextField
-								id="outlined-name"
-								label="Name"
-								className={classes.contactTextField}
-								value={this.state.from_name}
-								error={this.state.from_name === '' && this.state.isDirty}
-								helperText={
-									this.state.from_name === '' && this.state.isDirty
-										? 'Required'
-										: ''
-								}
-								onChange={this.handleChange('from_name')}
-								margin="normal"
-								variant="outlined"
-								required
-								style={{ width: '28%' }}
-							/>
-							<TextField
-								id="outlined-email-input"
-								label="Email"
-								className={classes.contactTextField}
-								value={this.state.reply_to}
-								error={this.state.reply_to === '' && this.state.isDirty}
-								helperText={
-									this.state.reply_to === '' && this.state.isDirty
-										? 'Required'
-										: ''
-								}
-								onChange={this.handleChange('reply_to')}
-								type="email"
-								name="email"
-								autoComplete="email"
-								margin="normal"
-								variant="outlined"
-								required
-								style={{ width: '67%' }}
-							/>
-							<TextField
-								id="outlined-multiline-static"
-								label="Message"
-								multiline
-								rows="8"
-								className={classes.contactTextField}
-								value={this.state.message_html}
-								error={this.state.message_html === '' && this.state.isDirty}
-								helperText={
-									this.state.message_html === '' && this.state.isDirty
-										? 'Required'
-										: ''
-								}
-								onChange={this.handleChange('message_html')}
-								margin="normal"
-								variant="outlined"
-								fullWidth
-								InputLabelProps={{
-									shrink: true
-								}}
-								required
-								style={{ width: '96%' }}
-							/>
+							<Grid container spacing={24}>
+								<Grid
+									item
+									xs={12}
+									sm={6}
+									className="contact__card__content__grid__item"
+								>
+									<TextField
+										id="outlined-name"
+										label="Name"
+										className={classes.contactTextField}
+										value={this.state.from_name}
+										error={this.state.from_name === '' && this.state.isDirty}
+										helperText={
+											this.state.from_name === '' && this.state.isDirty
+												? 'Required'
+												: ''
+										}
+										onChange={this.handleChange('from_name')}
+										margin="normal"
+										variant="outlined"
+										required
+									/>
+								</Grid>
+								<Grid
+									item
+									xs={12}
+									sm={6}
+									className="contact__card__content__grid__item"
+								>
+									<TextField
+										id="outlined-email-input"
+										label="Email"
+										className={classes.contactTextField}
+										value={this.state.reply_to}
+										error={this.state.reply_to === '' && this.state.isDirty}
+										helperText={
+											this.state.reply_to === '' && this.state.isDirty
+												? 'Required'
+												: ''
+										}
+										onChange={this.handleChange('reply_to')}
+										type="email"
+										name="email"
+										autoComplete="email"
+										margin="normal"
+										variant="outlined"
+										required
+									/>
+								</Grid>
+								<Grid
+									item
+									xs={12}
+									className="contact__card__content__grid__item"
+								>
+									<TextField
+										id="outlined-multiline-static"
+										label="Message"
+										multiline
+										rows="8"
+										className={classes.contactTextField}
+										value={this.state.message_html}
+										error={this.state.message_html === '' && this.state.isDirty}
+										helperText={
+											this.state.message_html === '' && this.state.isDirty
+												? 'Required'
+												: ''
+										}
+										onChange={this.handleChange('message_html')}
+										margin="normal"
+										variant="outlined"
+										fullWidth
+										InputLabelProps={{
+											shrink: true
+										}}
+										required
+									/>
+								</Grid>
+							</Grid>
 						</form>
 					</CardContent>
-					<CardActions>
-						<div id="g-recaptcha" className="g-recaptcha" />
-					</CardActions>
-					<CardActions>
-						<Button
-							className="contact__button"
-							size="large"
-							onClick={this.sendEmail}
-						>
-							Send
-						</Button>
-					</CardActions>
+					<div
+						id="g-recaptcha"
+						className="g-recaptcha"
+						style={{ width: '100%' }}
+					/>
+					<Button
+						className="contact__button"
+						size="large"
+						onClick={this.sendEmail}
+					>
+						Send
+					</Button>
 				</Card>
 			</div>
 		);

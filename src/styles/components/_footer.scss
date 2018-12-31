@@ -21,3 +21,10 @@
 		}
 	}
 }
+
+@media (max-height: $desktop-breakpoint + $l-size) {
+	.footer {
+		position: relative;
+		margin-top: $l-size;
+	}
+}
