@@ -20,5 +20,12 @@ export default [
 		site: 'http://www.dilutedband.com',
 		actionLink: 'https://github.com/tylercreller/diluted-band',
 		tech: reactIcon
+	},
+	{
+		img: dilutedImage,
+		title: 'Diluted Band',
+		site: 'http://www.dilutedband.com',
+		actionLink: 'https://github.com/tylercreller/diluted-band',
+		tech: reactIcon
 	}
 ];

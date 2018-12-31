@@ -1,5 +1,4 @@
 .projects {
-	max-width: $max-content-width;
 	transform: translate(-50%, -50%);
 }
 
@@ -43,8 +42,23 @@
 	}
 }
 
-@media screen and (max-width: $desktop-breakpoint - $gigantic-size) {
+@media screen and (max-width: $small-phone-breakpoint) {
 	.projects__gridList__tile {
+		max-width: 100% !important;
 		width: 100% !important;
+	}
+}
+
+@media screen and (min-width: $small-phone-breakpoint) {
+	.projects__gridList__tile {
+		max-width: 50% !important;
+		width: 50% !important;
+	}
+}
+
+@media screen and (min-width: $max-content-width) {
+	.projects__gridList__tile {
+		max-width: 33% !important;
+		width: 33% !important;
 	}
 }
