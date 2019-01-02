@@ -6,7 +6,7 @@
 .contact__button {
 	background: $flat-blue !important;
 	border-bottom: $bezel-effect-blue !important;
-	margin: $m-size 0 0 0 !important;
+	margin: $m-size $s-size 0 0 !important;
 	min-width: $gigantic-size !important;
 
 	&:hover {
@@ -61,10 +61,6 @@ form {
 	}
 	.contact__button {
 		width: 100%;
-		margin: 0 !important;
-	}
-	.contact__card__content__grid__item {
-		padding: $xs-size 0 !important;
 	}
 
 	form {

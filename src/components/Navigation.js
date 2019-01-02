@@ -27,7 +27,7 @@ const Navigation = () => (
 		</a>
 		<a
 			className="navigation__link"
-			href="https://www.linkedin.com/in/tyler-creller-942484100/"
+			href="https://www.linkedin.com/in/tyler-creller/"
 			target="_blank"
 		>
 			LinkedIn

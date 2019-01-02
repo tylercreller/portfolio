@@ -19,7 +19,7 @@ const Splash = () => {
 							<TextLoop>
 								<div>
 									<a
-										href="https://www.linkedin.com/in/tyler-creller-942484100/"
+										href="https://www.linkedin.com/in/tyler-creller/"
 										target="_blank"
 									>
 										<div>Web Developer</div>
