@@ -10,7 +10,7 @@
 	}
 }
 
-@media screen and (min-width: $small-phone-breakpoint) {
+@media screen and (max-width: $small-phone-breakpoint) {
 	.container {
 		padding: $xl-size 15% 0 15%;
 	}

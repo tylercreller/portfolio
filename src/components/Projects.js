@@ -38,6 +38,7 @@ function ProjectsGridList(props) {
 							<img
 								src={tile.img}
 								alt={tile.title}
+								title={tile.title}
 								onClick={navigateToLink.bind(this, tile.site)}
 							/>
 							<GridListTileBar
