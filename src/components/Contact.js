@@ -18,13 +18,22 @@ const styles = theme => ({
 	}
 });
 
+const initialState = {
+	reply_to: '',
+	from_name: '',
+	message_html: '',
+	isDirty: false,
+	validCaptcha: false
+};
 class Contact extends React.Component {
-	state = {
-		reply_to: '',
-		from_name: '',
-		message_html: '',
-		isDirty: false,
-		validCaptcha: false
+	constructor(props) {
+		super(props);
+		this.state = initialState;
+	}
+
+	reset = () => {
+		this.setState(initialState);
+		grecaptcha.reset();
 	};
 
 	sendEmail = () => {
@@ -48,6 +57,7 @@ class Contact extends React.Component {
 				emailjs.send(service_id, template_id, template_params);
 
 				Swal('Sent!', 'Thanks for reaching out.', 'success');
+				this.reset();
 			} else {
 				Swal('Oops', 'You must complete the CAPTCHA', 'error');
 			}
