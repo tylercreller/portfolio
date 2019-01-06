@@ -5,7 +5,7 @@ import 'normalize.css/normalize.css';
 import 'aos/dist/aos.css';
 import './styles/styles.scss';
 
-import Layout from './components/Layout';
+import AppRouter from './router/AppRouter';
 AOS.init();
 AOS.init({
 	// Global settings:
@@ -28,4 +28,4 @@ AOS.init({
 	anchorPlacement: 'top-bottom' // defines which position of the element regarding to window should trigger the animation
 });
 
-ReactDOM.render(<Layout />, document.getElementById('app'));
+ReactDOM.render(<AppRouter />, document.getElementById('app'));

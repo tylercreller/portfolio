@@ -1,12 +1,13 @@
 import React from 'react';
-import Navigation from './Navigation';
-import Footer from './Footer';
-import Container from './Container';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Splash from './Splash';
-import Contact from './Contact';
-import NotFoundPage from './NotFoundPage';
-import Projects from './Projects';
+
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import Container from '../components/Container';
+import Splash from '../components/Splash';
+import Contact from '../components/Contact';
+import NotFoundPage from '../components/NotFoundPage';
+import Projects from '../components/Projects';
 
 export default class Layout extends React.Component {
 	render() {
