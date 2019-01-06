@@ -33,7 +33,7 @@ class Contact extends React.Component {
 
 	reset = () => {
 		this.setState(initialState);
-		grecaptcha.reset();
+		window.grecaptcha.reset();
 	};
 
 	sendEmail = () => {
