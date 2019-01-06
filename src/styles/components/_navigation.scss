@@ -53,3 +53,9 @@
 		padding-bottom: $s-size;
 	}
 }
+
+@media screen and (min-width: $small-phone-breakpoint) {
+	.navigation {
+		padding: $m-size $l-size $m-size 15%;
+	}
+}
