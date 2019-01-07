@@ -6,8 +6,16 @@
 .contact__button {
 	background: $flat-blue !important;
 	border-bottom: $bezel-effect-blue !important;
-	margin: $m-size $s-size 0 0 !important;
+	margin: $s-size $s-size 0 0 !important;
 	min-width: $gigantic-size !important;
+	height: $xl-size;
+
+	> * {
+		color: $off-white;
+		font-weight: 1000;
+		letter-spacing: 2px;
+		font-size: $m-size;
+	}
 
 	&:hover {
 		background: darken($flat-blue, 20%) !important;
@@ -61,6 +69,7 @@ form {
 	}
 	.contact__button {
 		width: 100%;
+		margin: 0 $s-size 0 0 !important;
 	}
 
 	form {
