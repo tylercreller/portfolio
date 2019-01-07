@@ -36,6 +36,10 @@
 
 .contact__card__content__grid__item {
 	padding: $s-size $s-size $s-size 0 !important;
+
+	> div > label {
+		font-size: $m-size;
+	}
 }
 
 form {
@@ -77,14 +81,14 @@ form {
 		#outlined-name,
 		#outlined-email-input,
 		#outlined-multiline-static {
-			font-size: $xs-size !important;
-			line-height: $xs-size;
+			font-size: $s-size !important;
+			line-height: $s-size;
 		}
 
 		#outlined-name-helper-text,
 		#outlined-email-input-helper-text,
 		#outlined-multiline-static-helper-text {
-			font-size: $xs-size !important;
+			font-size: $s-size !important;
 		}
 	}
 }
