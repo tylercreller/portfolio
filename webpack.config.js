@@ -1,8 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-	.BundleAnalyzerPlugin;
 
 module.exports = env => {
 	const isProduction = env === 'production';
@@ -61,7 +59,7 @@ module.exports = env => {
 		optimization: {
 			minimizer: [new UglifyJsPlugin()]
 		},
-		plugins: [MiniCssExtract, new BundleAnalyzerPlugin()],
+		plugins: [MiniCssExtract],
 		devtool: isProduction ? false : 'inline-source-map',
 		devServer: {
 			contentBase: path.join(__dirname, 'public'),
