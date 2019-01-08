@@ -21,6 +21,7 @@ const Splash = () => {
 									<a
 										href="https://www.linkedin.com/in/tyler-creller/"
 										target="_blank"
+										rel="noreferrer"
 									>
 										<div>Web Developer</div>
 									</a>
@@ -29,6 +30,7 @@ const Splash = () => {
 									<a
 										href="https://www.instagram.com/p/BqsAgJPgumi/"
 										target="_blank"
+										rel="noreferrer"
 									>
 										Dog Dad
 									</a>
@@ -37,6 +39,7 @@ const Splash = () => {
 									<a
 										href="https://www.instagram.com/p/BkApnM5Dz_T/"
 										target="_blank"
+										rel="noreferrer"
 									>
 										Foodie
 									</a>
@@ -45,6 +48,7 @@ const Splash = () => {
 									<a
 										href="https://www.instagram.com/p/BlTheP1HL_y/"
 										target="_blank"
+										rel="noreferrer"
 									>
 										Musician
 									</a>

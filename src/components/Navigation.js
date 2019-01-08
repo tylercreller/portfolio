@@ -22,6 +22,7 @@ const Navigation = () => (
 			className="navigation__link"
 			href="https://github.com/tylercreller"
 			target="_blank"
+			rel="noreferrer"
 		>
 			GitHub
 		</a>
@@ -29,6 +30,7 @@ const Navigation = () => (
 			className="navigation__link"
 			href="https://www.linkedin.com/in/tyler-creller/"
 			target="_blank"
+			rel="noreferrer"
 		>
 			LinkedIn
 		</a>
