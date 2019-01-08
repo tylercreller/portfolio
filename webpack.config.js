@@ -1,9 +1,12 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+	.BundleAnalyzerPlugin;
 
 module.exports = env => {
 	const isProduction = env === 'production';
-	const CSSExtract = new ExtractTextPlugin('styles.css');
+	const MiniCssExtract = new MiniCssExtractPlugin({ filename: 'styles.css' });
 
 	return {
 		entry: './src/app.js',
@@ -20,22 +23,26 @@ module.exports = env => {
 				},
 				{
 					test: /\.s?css$/,
-					use: CSSExtract.extract({
-						use: [
-							{
-								loader: 'css-loader',
-								options: {
-									sourceMap: true
-								}
-							},
-							{
-								loader: 'sass-loader',
-								options: {
-									sourceMap: true
-								}
+					use: [
+						{
+							loader: MiniCssExtractPlugin.loader,
+							options: {
+								sourceMap: true
 							}
-						]
-					})
+						},
+						{
+							loader: 'css-loader',
+							options: {
+								sourceMap: true
+							}
+						},
+						{
+							loader: 'sass-loader',
+							options: {
+								sourceMap: true
+							}
+						}
+					]
 				},
 				{
 					test: /\.(png|jpg|gif)$/i,
@@ -50,8 +57,12 @@ module.exports = env => {
 				}
 			]
 		},
-		plugins: [CSSExtract],
-		devtool: isProduction ? 'source-map' : 'inline-source-map',
+		mode: isProduction ? 'production' : 'development',
+		optimization: {
+			minimizer: [new UglifyJsPlugin()]
+		},
+		plugins: [MiniCssExtract, new BundleAnalyzerPlugin()],
+		devtool: isProduction ? false : 'inline-source-map',
 		devServer: {
 			contentBase: path.join(__dirname, 'public'),
 			historyApiFallback: true,
