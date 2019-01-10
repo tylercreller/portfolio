@@ -4,65 +4,99 @@
 }
 
 .contact__button {
-	background: $flat-blue !important;
-	border-bottom: $bezel-effect-blue !important;
-	margin: $s-size $s-size 0 0 !important;
-	min-width: $gigantic-size !important;
+	font-family: $font-family-content;
+	background: $flat-blue;
+	border: none;
+	border-bottom: $bezel-effect-blue;
+	border-radius: 4px;
+	margin: $s-size $s-size 0 0;
+	min-width: 15rem;
 	height: $xl-size;
-
-	> * {
-		color: $off-white;
-		font-weight: 1000;
-		letter-spacing: 2px;
-		font-size: $m-size;
-	}
+	color: $off-white;
+	font-weight: 1000;
+	letter-spacing: 2px;
+	font-size: $m-size;
 
 	&:hover {
-		background: darken($flat-blue, 20%) !important;
-		border-bottom: darken($flat-blue, 100%) !important;
+		background: darken($flat-blue, 20%);
+		border-bottom: darken($flat-blue, 100%);
 	}
 }
 
 .contact__card {
 	margin: 0;
 	text-align: initial;
-	border-radius: $s-size !important;
-	padding: $xs-size $m-size $m-size $m-size;
+	border-radius: $s-size;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2
+
 }
 
 .contact__card__content {
-	padding: $xs-size $s-size !important;
+	background: white;
+	border-radius: $s-size;
+	padding: $m-size $m-size;
 }
-
-.contact__card__content__grid__item {
-	padding: $s-size $s-size $s-size 0 !important;
-
-	> div > label {
-		font-size: $m-size;
+.contact__card__content__name {
+	float: left;
+	width: 49%;
+	padding-right: 1%;
+	> input {
+		width: 100%
 	}
 }
-
+.contact__card__content__email {
+	float: left;
+	width: 50%;
+	> input {
+		width: 100%
+	}
+}
+.contact__card__content__message {
+	clear: both;
+	padding-top: 10px;
+	width: 100%;
+	> textarea {
+		width: 100%;
+	}
+}
 form {
-	> div > label,
-	#outlined-name,
-	#outlined-email-input,
-	#outlined-multiline-static {
-		font-family: $font-family-content !important;
-		font-size: $m-size !important;
+	label {
+		display: block;
+	}
+	input, textarea {
+		display: inline-block;
+		color: rgba(0, 0, 0, 0.87);		
+		border: 1px solid darken($off-white, 10%);
+		border-radius: 4px;
+		padding: $s-size $xs-size;
+		margin-right: $m-size;
+		&:focus {
+			outline: none;
+			border: 1px solid $flat-blue;
+			box-shadow: 0 0 $xs-size darken($flat-blue, 10%);
+		}
+		margin-top: 3px;
+		box-sizing: border-box;
+	}
+
+	label,
+	input,
+	textarea {
+		font-family: $font-family-content;
+		font-size: $m-size;
 		line-height: $m-size;
 	}
 
-	#outlined-name-helper-text,
-	#outlined-email-input-helper-text,
-	#outlined-multiline-static-helper-text {
-		font-family: $font-family-content !important;
-		font-size: $s-size !important;
+	.contact__card__content__helper-text {
+		font-family: $font-family-content;
+		font-size: $s-size;
 		color: $flat-red;
+		margin: 3px 0;
 	}
 }
 
 .g-recaptcha {
-	margin: $xs-size 0 0 0 !important;
+	margin: $xs-size 0 0 0;
 }
 
 @media screen and (max-width: $desktop-breakpoint - $gigantic-size) {
@@ -73,22 +107,27 @@ form {
 	}
 	.contact__button {
 		width: 100%;
-		margin: 0 $s-size 0 0 !important;
+		margin: 0 $s-size 0 0;
 	}
 
 	form {
-		> div > label,
-		#outlined-name,
-		#outlined-email-input,
-		#outlined-multiline-static {
-			font-size: $s-size !important;
+		label,
+		input,
+		textarea {
+			font-size: $s-size;
 			line-height: $s-size;
 		}
 
-		#outlined-name-helper-text,
-		#outlined-email-input-helper-text,
-		#outlined-multiline-static-helper-text {
-			font-size: $s-size !important;
+		.contact__card__content__helper-text {
+			font-size: $s-size;
 		}
+	}
+
+	.contact__card__content__name {
+		width: 100%;
+	}
+	.contact__card__content__email {
+		width: 100%;	
+		margin-top: 10px;
 	}
 }

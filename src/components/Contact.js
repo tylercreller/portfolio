@@ -1,21 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
 import Swal from 'sweetalert2';
-
-const styles = theme => ({
-	contactTextField: {
-		marginRight: theme.spacing.unit,
-		marginBottom: 0,
-		marginTop: 0,
-		width: '100%'
-	}
-});
 
 const initialState = {
 	reply_to: '',
@@ -24,7 +8,7 @@ const initialState = {
 	isDirty: false,
 	validCaptcha: false
 };
-class Contact extends React.Component {
+export default class Contact extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = initialState;
@@ -89,6 +73,10 @@ class Contact extends React.Component {
 		});
 	};
 
+	displayRequired = () => {
+		return <p className="contact__card__content__helper-text">Required</p>
+	}
+
 	componentDidMount() {
 		window.recaptchaSuccess = this.recaptchaSuccess;
 		window.recaptchaExpired = this.recaptchaExpired;
@@ -103,115 +91,68 @@ class Contact extends React.Component {
 	}
 
 	render() {
-		const { classes } = this.props;
 		return (
 			<div className="contact" data-aos="fade-in">
 				<div className="large-text">
 					Let's <div className="large-text--yellow">Chat</div>.
 				</div>
-				<Card className="contact__card">
-					<CardContent className="contact__card__content">
+				<div className="contact__card">
+					<div className="contact__card__content">
 						<form noValidate autoComplete="off">
-							<Grid container spacing={24}>
-								<Grid
-									item
-									xs={12}
-									sm={6}
-									className="contact__card__content__grid__item"
-								>
-									<TextField
-										id="outlined-name"
-										label="Name"
-										className={classes.contactTextField}
-										value={this.state.from_name}
-										error={this.state.from_name === '' && this.state.isDirty}
-										helperText={
-											this.state.from_name === '' && this.state.isDirty
-												? 'Required'
-												: ''
-										}
-										onChange={this.handleChange('from_name')}
-										margin="normal"
-										variant="outlined"
-										required
-									/>
-								</Grid>
-								<Grid
-									item
-									xs={12}
-									sm={6}
-									className="contact__card__content__grid__item"
-								>
-									<TextField
-										id="outlined-email-input"
-										label="Email"
-										className={classes.contactTextField}
-										value={this.state.reply_to}
-										error={this.state.reply_to === '' && this.state.isDirty}
-										helperText={
-											this.state.reply_to === '' && this.state.isDirty
-												? 'Required'
-												: ''
-										}
-										onChange={this.handleChange('reply_to')}
-										type="email"
-										name="email"
-										autoComplete="email"
-										margin="normal"
-										variant="outlined"
-										required
-									/>
-								</Grid>
-								<Grid
-									item
-									xs={12}
-									className="contact__card__content__grid__item"
-								>
-									<TextField
-										id="outlined-multiline-static"
-										label="Message"
-										multiline
-										rows="8"
-										className={classes.contactTextField}
-										value={this.state.message_html}
-										error={this.state.message_html === '' && this.state.isDirty}
-										helperText={
-											this.state.message_html === '' && this.state.isDirty
-												? 'Required'
-												: ''
-										}
-										onChange={this.handleChange('message_html')}
-										margin="normal"
-										variant="outlined"
-										fullWidth
-										InputLabelProps={{
-											shrink: true
-										}}
-										required
-									/>
-								</Grid>
-							</Grid>
+							<div className="contact__card__content__name">
+								<label htmlFor="name">Name *</label>
+								<input
+									id="name"
+									className="contact__card__content__input"
+									value={this.state.from_name}
+									onChange={this.handleChange('from_name')}
+									autoComplete="name"
+									required
+								/>
+								{this.state.isDirty && !this.state.from_name && this.displayRequired()}
+							</div>
+							<div className="contact__card__content__email">
+								<label htmlFor="email">Email *</label>
+								<input
+									id="email"
+									className="contact__card__content__input"
+									value={this.state.reply_to}
+									onChange={this.handleChange('reply_to')}
+									type="email"
+									autoComplete="email"
+									required
+								/>
+								{this.state.isDirty && !this.state.reply_to && this.displayRequired()}
+							</div>
+							<div className="contact__card__content__message">
+								<label htmlFor="message">Message *</label>
+								<textarea
+									id="mesage"
+									rows="8"
+									className="contact__card__content__input"
+									value={this.state.message_html}
+									onChange={this.handleChange('message_html')}
+									required
+								/>
+								{this.state.isDirty && !this.state.message_html && this.displayRequired()}
+							</div>
 						</form>
-					</CardContent>
-					<div
-						id="g-recaptcha"
-						className="g-recaptcha"
-						style={{ width: '100%' }}
-					/>
-					<Button
-						className="contact__button"
-						size="large"
-						onClick={this.sendEmail}
-					>
-						Send
-					</Button>
-				</Card>
-			</div>
+						<div
+							id="g-recaptcha"
+							className="g-recaptcha"
+							style={{ width: '100%' }}
+						/>
+						<button
+							className="contact__button"
+							size="large"
+							onClick={this.sendEmail}
+						>
+							SEND
+						</button>
+					</div>
+
+				</div >
+			</div >
 		);
 	}
 }
-
-Contact.propTypes = {
-	classes: PropTypes.object.isRequired
-};
-export default withStyles(styles)(Contact);
