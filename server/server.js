@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const expressStaticGzip = require("express-static-gzip");
 const publicPath = path.join(__dirname, '..', 'public');
 const port = process.env.PORT || 3000; // Heroku port or 3000v
 
@@ -17,7 +18,7 @@ function requireHTTPS(req, res, next) {
 }
 
 app.use(requireHTTPS);
-app.use(express.static(publicPath));
+app.use(expressStaticGzip(publicPath));
 
 app.get('*', (request, response) => {
 	response.sendFile(path.join(publicPath, 'index.html'));
