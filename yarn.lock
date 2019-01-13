@@ -2396,6 +2396,11 @@ es-to-primitive@^1.2.0:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
+es6-shim@^0.35.4:
+  version "0.35.4"
+  resolved "https://registry.yarnpkg.com/es6-shim/-/es6-shim-0.35.4.tgz#8d5a4109756383d3f0323421089c423acf8378f1"
+  integrity sha512-oJidbXjN/VWXZJs41E9JEqWzcFbjt43JupimIoVX82Thzt5qy1CiYezdhRmWkj3KOuwJ106IG/ZZrcFC6fgIUQ==
+
 escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
@@ -5447,10 +5452,10 @@ react-router@^4.2.0:
     prop-types "^15.6.1"
     warning "^4.0.1"
 
-react-text-loop@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-text-loop/-/react-text-loop-2.0.0.tgz#4e576aa6748563412c3804343da84b707132bfe8"
-  integrity sha512-19Rw7gkNi5pZxprmZ+BDUI14ve+St63Jb3nJ138CskCD1G46wAgChA9Jd9ww+wF+noAobSrWDgJ8oOHtCfkJOA==
+react-text-loop@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-text-loop/-/react-text-loop-2.0.1.tgz#7dc17109aa751e64d7782b7d68ccb319ccfcdd30"
+  integrity sha512-FuqCbJyopNNzDVDzqRm/WDNgVr82kGX8sn0xKod9zmFwO8IfZ6v/hd4WxtSM0nt8zYTXbG9FN3G4QwCz9QOLQg==
   dependencies:
     cxs "^6.2.0"
     prop-types "^15.6.2"
