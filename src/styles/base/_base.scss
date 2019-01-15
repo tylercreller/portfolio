@@ -49,6 +49,20 @@ button:disabled {
 	font-size: 1.6rem !important;
 }
 
+.menu-text {
+	font-family: $font-family-content !important;
+	font-weight: 1000 !important;
+	letter-spacing: 0.2rem !important;
+	font-size: $m-size !important;
+	color: white;
+	text-decoration: none !important;
+	user-select: none !important;
+	&:hover {
+		color: $flat-yellow !important;
+		cursor: pointer !important;
+	}
+}
+
 @media screen and (max-width: $desktop-breakpoint) {
 	.large-text {
 		font-size: $xxl-size;
