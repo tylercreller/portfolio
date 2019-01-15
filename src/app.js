@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'normalize.css/normalize.css';
 import 'aos/dist/aos.css';
 import './styles/styles.scss';
+import 'es6-shim';
 
 import AppRouter from './router/AppRouter';
 AOS.init();
