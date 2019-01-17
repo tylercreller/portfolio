@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const expressStaticGzip = require("express-static-gzip");
 const publicPath = path.join(__dirname, '..', 'public');
-const port = process.env.PORT || 3000; // Heroku port or 3000v
+const port = process.env.PORT || 3000; // Heroku port or 3000
 
 function requireHTTPS(req, res, next) {
 	// The 'x-forwarded-proto' check is for Heroku

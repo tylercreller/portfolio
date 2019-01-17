@@ -4,20 +4,8 @@
 	padding: $m-size $l-size $m-size 20%;
 }
 .navigation__link {
-	font-family: $font-family-content;
-	font-weight: 1000;
-	letter-spacing: 0.2rem;
-	font-size: $m-size;
-	color: white;
-	text-decoration: none;
-	user-select: none;
-
 	&:not(:last-child) {
 		padding-right: $m-size;
-	}
-	&:hover {
-		color: $flat-yellow;
-		cursor: pointer;
 	}
 	&::after {
 		content: '';
@@ -27,7 +15,6 @@
 		background: $flat-yellow;
 		transition: width 0.3s;
 	}
-
 	&:hover::after {
 		width: 100%;
 		cursor: pointer;

@@ -1,10 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import SimpleMenu from './SimpleMenu';
 
 const Navigation = () => (
 	<div className="navigation">
 		<NavLink
-			className="navigation__link"
+			className="menu-text navigation__link"
 			activeClassName="navigation__link-active"
 			to="/"
 			exact={true}
@@ -12,35 +13,20 @@ const Navigation = () => (
 			Home
 		</NavLink>
 		<NavLink
-			className="navigation__link"
+			className="menu-text navigation__link"
 			activeClassName="navigation__link-active"
 			to="/projects"
 		>
 			Projects
 		</NavLink>
-		<a
-			className="navigation__link"
-			href="https://github.com/tylercreller"
-			target="_blank"
-			rel="noreferrer"
-		>
-			GitHub
-		</a>
-		<a
-			className="navigation__link"
-			href="https://www.linkedin.com/in/tyler-creller/"
-			target="_blank"
-			rel="noreferrer"
-		>
-			LinkedIn
-		</a>
 		<NavLink
-			className="navigation__link"
+			className="menu-text navigation__link"
 			activeClassName="navigation__link-active"
 			to="/contact"
 		>
 			Contact
 		</NavLink>
+		<SimpleMenu className="navigation__link" itemClassName="menu-text" />
 	</div>
 );
 
