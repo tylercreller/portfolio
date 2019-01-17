@@ -26,6 +26,10 @@ class ProjectsGridList extends React.Component {
 		super(props);
 	}
 
+	navigateToLink = link => {
+		window.open(link, '_blank');
+	};
+
 	render() {
 		const { classes } = this.props;
 
@@ -40,7 +44,7 @@ class ProjectsGridList extends React.Component {
 									src={tile.img}
 									alt={tile.title}
 									title={tile.title}
-									onClick={navigateToLink.bind(this, tile.site)}
+									onClick={this.navigateToLink.bind(this, tile.site)}
 								/>
 								<GridListTileBar
 									className="projects__gridList__tile__bar"
