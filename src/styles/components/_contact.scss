@@ -5,21 +5,21 @@
 
 .contact__button {
 	font-family: $font-family-content;
-	background: $flat-blue;
+	background: $primary-color-1;
 	border: none;
 	border-bottom: $bezel-effect-blue;
 	border-radius: 4px;
 	margin: $s-size $s-size 0 0;
 	min-width: 15rem;
 	height: $xl-size;
-	color: $off-white;
+	color: $primary-color-3;
 	font-weight: 1000;
 	letter-spacing: 2px;
 	font-size: $m-size;
 
 	&:hover {
-		background: darken($flat-blue, 20%);
-		border-bottom: darken($flat-blue, 100%);
+		background: darken($primary-color-1, 20%);
+		border-bottom: darken($primary-color-1, 100%);
 	}
 }
 
@@ -27,28 +27,29 @@
 	margin: 0;
 	text-align: initial;
 	border-radius: $s-size;
-	box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2
-
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px,
+		rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2;
 }
 
 .contact__card__content {
-	background: white;
+	background: $primary-color-3;
 	border-radius: $s-size;
 	padding: $m-size $m-size;
+	box-shadow: $box-shadow;
 }
 .contact__card__content__name {
 	float: left;
 	width: 49%;
 	padding-right: 1%;
 	> input {
-		width: 100%
+		width: 100%;
 	}
 }
 .contact__card__content__email {
 	float: left;
 	width: 50%;
 	> input {
-		width: 100%
+		width: 100%;
 	}
 }
 .contact__card__content__message {
@@ -63,17 +64,18 @@ form {
 	label {
 		display: block;
 	}
-	input, textarea {
+	input,
+	textarea {
 		display: inline-block;
-		color: rgba(0, 0, 0, 0.87);		
-		border: 1px solid darken($off-white, 10%);
+		color: rgba(0, 0, 0, 0.87);
+		border: 1px solid darken($primary-color-3, 10%);
 		border-radius: 4px;
 		padding: $s-size $xs-size;
 		margin-right: $m-size;
 		&:focus {
 			outline: none;
-			border: 1px solid $flat-blue;
-			box-shadow: 0 0 $xs-size darken($flat-blue, 10%);
+			border: 1px solid $primary-color-1;
+			box-shadow: 0 0 $xs-size darken($primary-color-1, 10%);
 		}
 		margin-top: 3px;
 		box-sizing: border-box;
@@ -90,7 +92,7 @@ form {
 	.contact__card__content__helper-text {
 		font-family: $font-family-content;
 		font-size: $s-size;
-		color: $flat-red;
+		color: $warning-color;
 		margin: 3px 0;
 	}
 }
@@ -127,7 +129,7 @@ form {
 		width: 100%;
 	}
 	.contact__card__content__email {
-		width: 100%;	
+		width: 100%;
 		margin-top: 10px;
 	}
 }

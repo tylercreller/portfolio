@@ -4,7 +4,7 @@ html {
 }
 
 body {
-	background-color: $flat-blue;
+	background-color: $primary-color-1;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: $m-size;
 
@@ -26,7 +26,7 @@ button:disabled {
 }
 
 .large-text {
-	color: $off-white;
+	color: $primary-color-3;
 
 	font-size: $gigantic-size;
 	font-family: $font-family-title;
@@ -36,12 +36,12 @@ button:disabled {
 	user-select: none;
 
 	a {
-		color: $flat-yellow;
+		color: $primary-color-2;
 	}
 }
 
 .large-text--yellow {
-	color: $flat-yellow;
+	color: $primary-color-2;
 	display: inline;
 }
 
@@ -54,11 +54,11 @@ button:disabled {
 	font-weight: 1000 !important;
 	letter-spacing: 0.2rem !important;
 	font-size: $m-size !important;
-	color: white;
+	color: $primary-color-3;
 	text-decoration: none !important;
 	user-select: none !important;
 	&:hover {
-		color: $flat-yellow !important;
+		color: $primary-color-2 !important;
 		cursor: pointer !important;
 	}
 }

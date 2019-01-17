@@ -1,8 +1,15 @@
 // Color
-$off-white: #ecf0f1;
-$flat-red: #f4032f;
-$flat-blue: #03a9f4;
-$flat-yellow: #f4c803;
+$warning-color: #f4032f;
+
+// Yellow Theme
+// $primary-color-1: #03a9f4;
+// $primary-color-2: #f4c803;
+// $primary-color-3: #ecf0f1;
+
+// Sleek Theme
+$primary-color-1: #2d3436;
+$primary-color-2: #d63031;
+$primary-color-3: #ecf0f1;
 
 // Spacing
 $xs-size: 1rem;
@@ -21,7 +28,7 @@ $font-family-content: 'Roboto', sans-serif;
 $font-family-title: 'Fredoka One', sans-serif;
 
 // Effects
-$bezel-effect-blue: 0.3rem solid darken($flat-blue, 20%);
-$bezel-effect-white: 0.3rem solid darken($off-white, 10%);
-$text-shadow: 0.6rem 0.6rem 0 darken($flat-blue, 10%);
-
+$bezel-effect-blue: 0.3rem solid darken($primary-color-1, 20%);
+$bezel-effect-white: 0.3rem solid darken($primary-color-3, 10%);
+$text-shadow: 0.6rem 0.6rem 0 darken($primary-color-1, 10%);
+$box-shadow: 0.6rem 0.6rem 0 darken($primary-color-1, 10%);

@@ -12,7 +12,7 @@
 		display: block;
 		width: 0;
 		height: 0.2rem;
-		background: $flat-yellow;
+		background: $primary-color-2;
 		transition: width 0.3s;
 	}
 	&:hover::after {
@@ -22,7 +22,7 @@
 }
 
 .navigation__link-active {
-	color: $flat-yellow !important;
+	color: $primary-color-2 !important;
 	cursor: context-menu !important;
 	pointer-events: none;
 	&::after {

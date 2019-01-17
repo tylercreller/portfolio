@@ -3,31 +3,31 @@
 }
 
 .projects__gridList__tile__site-title {
-	color: $off-white;
+	color: $primary-color-3;
 	font-size: $m-size;
 	font-family: $font-family-content;
 	cursor: context-menu;
 }
 .projects__gridList__tile__site-link {
-	color: $off-white;
+	color: $primary-color-3;
 	font-size: $s-size;
 	font-family: $font-family-content;
 	letter-spacing: 0.1rem;
 	&:hover {
-		color: $flat-yellow;
+		color: $primary-color-2;
 	}
 }
 
 .projects__gridList__tile__action-link {
-	color: $off-white;
+	color: $primary-color-3;
 	font-family: $font-family-content;
 	&:hover {
-		color: $flat-red;
+		color: $primary-color-2;
 	}
 }
 
 .projects__gridList__tile__tech {
-	color: $off-white;
+	color: $primary-color-3;
 	padding-left: $xs-size;
 	&:hover {
 		cursor: context-menu;
