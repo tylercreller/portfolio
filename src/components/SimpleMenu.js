@@ -45,7 +45,7 @@ class SimpleMenu extends React.Component {
             GitHub
           </MenuItem>
           <MenuItem className={this.props.itemClassName} onClick={this.handleItemClick.bind(this, "https://www.linkedin.com/in/tyler-creller/")}>LinkedIn</MenuItem>
-          <MenuItem className={this.props.itemClassName} onClick={this.handleItemClick.bind(this, "https://docs.google.com/viewer?url=https://docs.google.com/document/d/1b848fzmgl76IvzRDOhkfLhcACHqnKHO14cKqTZgZ5CU/export?format=pdf")}>Resume</MenuItem>
+          <MenuItem className={this.props.itemClassName} onClick={this.handleItemClick.bind(this, "https://docs.google.com/viewer?url=https://docs.google.com/document/d/1anfDrgbiZKz3xpwbmiiurQ4dfSxi9k7QrxlkS5GQ-_4/export?format=pdf")}>Resume</MenuItem>
         </Menu>
       </div>
     );
