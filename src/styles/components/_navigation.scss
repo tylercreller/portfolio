@@ -4,6 +4,7 @@
 	padding: $m-size $l-size $m-size 20%;
 }
 .navigation__link {
+	user-select: none;
 	&:not(:last-child) {
 		padding-right: $m-size;
 	}
