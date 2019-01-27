@@ -4,6 +4,10 @@
 	padding: $m-size $l-size $m-size 20%;
 }
 .navigation__link {
+	user-select: none;
+	outline: 0;
+	-webkit-tap-highlight-color: transparent;
+
 	&:not(:last-child) {
 		padding-right: $m-size;
 	}
