@@ -5,7 +5,10 @@ const CompressionPlugin = require('compression-webpack-plugin');
 module.exports = env => {
 	const isProduction = env === 'production';
 	const MiniCssExtract = new MiniCssExtractPlugin({ filename: 'styles.css' });
-	const TextCompression = new CompressionPlugin({ test: /\.js$/, deleteOriginalAssets: true });
+	const TextCompression = new CompressionPlugin({
+		test: /\.js$/,
+		deleteOriginalAssets: true
+	});
 	const plugins = [MiniCssExtract];
 	if (isProduction) {
 		plugins.push(TextCompression);
