@@ -1,29 +1,3 @@
-// import React from 'react';
-
-// export default class ProjectInfo extends React.Component {
-
-// 	render() {
-// 		return (
-// 			<div>
-// 				<div id="overlay" />
-// 				<div className="project-info">
-// 					<img src={this.props.projImg} />
-// 					<h4>{this.props.projTitle}</h4>
-// 					<p>{this.props.projSummary}</p>
-// 					<div className="project-info__footer">
-// 						<div>{this.props.projSite}</div>
-// 						{this.props.projActionLink && (
-// 							<a href={this.props.projActionLink} target="_blank">
-// 								View on Github
-// 							</a>
-// 						)}
-// 					</div>
-// 				</div>
-// 			</div>
-// 		);
-// 	}
-// }
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
@@ -54,7 +28,7 @@ class ProjectInfo extends React.Component {
 		const { fullScreen } = this.props;
 
 		return (
-			<div>
+			<React.Fragment>
 				<Button
 					variant="outlined"
 					color="primary"
@@ -86,7 +60,7 @@ class ProjectInfo extends React.Component {
 						</Button>
 					</DialogActions>
 				</Dialog>
-			</div>
+			</React.Fragment>
 		);
 	}
 }

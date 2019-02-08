@@ -6,6 +6,7 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import gridListData from '../data/gridListData';
+import Tracker from '../utils/tracking';
 
 const styles = () => ({
 	root: {
@@ -27,6 +28,7 @@ class ProjectsGridList extends React.Component {
 	}
 
 	navigateToLink = link => {
+		Tracker.trackClickEvent('Project Link', link);
 		window.open(link, '_blank');
 	};
 

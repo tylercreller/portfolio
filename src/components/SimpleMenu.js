@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import Tracker from '../utils/tracking';
 
 class SimpleMenu extends React.Component {
 	state = {
@@ -16,6 +17,7 @@ class SimpleMenu extends React.Component {
 	};
 
 	handleItemClick = link => {
+		Tracker.trackClickEvent('External Menu Link', link);
 		if (link) {
 			window.open(link, '_blank');
 		}
