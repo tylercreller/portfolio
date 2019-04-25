@@ -28,7 +28,7 @@ const Splash = () => {
 								</div>
 								<div>
 									<a
-										href="https://www.instagram.com/p/BqsAgJPgumi/"
+										href="https://www.instagram.com/p/BvwBb4wgTpB/"
 										target="_blank"
 										rel="noreferrer"
 									>
@@ -46,7 +46,7 @@ const Splash = () => {
 								</div>
 								<div>
 									<a
-										href="https://www.instagram.com/p/BlTheP1HL_y/"
+										href="https://www.instagram.com/p/BhHjzwGnS6_/"
 										target="_blank"
 										rel="noreferrer"
 									>
