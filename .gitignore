@@ -1,4 +1,7 @@
 node_modules
 .vscode/settings.json
 public/dist
-yarn-error.log
+*.log
+*.cache
+*.firebase
+.firebaserc

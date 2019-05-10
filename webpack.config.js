@@ -7,7 +7,7 @@ module.exports = env => {
 	const MiniCssExtract = new MiniCssExtractPlugin({ filename: 'styles.css' });
 	const TextCompression = new CompressionPlugin({
 		test: /\.js$/,
-		deleteOriginalAssets: true
+		deleteOriginalAssets: false
 	});
 	const plugins = [MiniCssExtract];
 	if (isProduction) {

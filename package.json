@@ -8,8 +8,7 @@
 		"build:dev": "webpack --mode=development",
 		"build:prod": "webpack -p --env production --mode=production",
 		"dev-server": "webpack-dev-server",
-		"start": "node server/server.js",
-		"heroku-postbuild": "yarn run build:prod"
+		"deploy": "yarn run build:prod & firebase deploy"
 	},
 	"dependencies": {
 		"@babel/cli": "^7.2.3",

@@ -74,8 +74,8 @@ export default class Contact extends React.Component {
 	};
 
 	displayRequired = () => {
-		return <p className="contact__card__content__helper-text">Required</p>
-	}
+		return <p className="contact__card__content__helper-text">Required</p>;
+	};
 
 	componentDidMount() {
 		window.recaptchaSuccess = this.recaptchaSuccess;
@@ -109,7 +109,9 @@ export default class Contact extends React.Component {
 									autoComplete="name"
 									required
 								/>
-								{this.state.isDirty && !this.state.from_name && this.displayRequired()}
+								{this.state.isDirty &&
+									!this.state.from_name &&
+									this.displayRequired()}
 							</div>
 							<div className="contact__card__content__email">
 								<label htmlFor="email">Email *</label>
@@ -122,7 +124,9 @@ export default class Contact extends React.Component {
 									autoComplete="email"
 									required
 								/>
-								{this.state.isDirty && !this.state.reply_to && this.displayRequired()}
+								{this.state.isDirty &&
+									!this.state.reply_to &&
+									this.displayRequired()}
 							</div>
 							<div className="contact__card__content__message">
 								<label htmlFor="message">Message *</label>
@@ -134,7 +138,9 @@ export default class Contact extends React.Component {
 									onChange={this.handleChange('message_html')}
 									required
 								/>
-								{this.state.isDirty && !this.state.message_html && this.displayRequired()}
+								{this.state.isDirty &&
+									!this.state.message_html &&
+									this.displayRequired()}
 							</div>
 						</form>
 						<div
@@ -150,9 +156,8 @@ export default class Contact extends React.Component {
 							SEND
 						</button>
 					</div>
-
-				</div >
-			</div >
+				</div>
+			</div>
 		);
 	}
 }
