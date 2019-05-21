@@ -18,5 +18,11 @@ export default [
 		site: 'http://www.dilutedband.com',
 		actionLink: 'https://github.com/tylercreller/diluted-band',
 		tech: reactIcon
+	},
+	{
+		img: 'images/exposure.png',
+		title: 'Get Paid in Exposure!',
+		site: 'http://www.paid-in-exposure.com',
+		tech: reactIcon
 	}
 ];
