@@ -21,7 +21,7 @@ export default [
 	},
 	{
 		img: 'images/exposure.png',
-		title: 'Get Paid in Exposure!',
+		title: 'Paid in Exposure',
 		site: 'https://www.paid-in-exposure.com',
 		tech: reactIcon
 	}
