@@ -15,14 +15,14 @@ export default [
 	{
 		img: 'images/diluted-min.png',
 		title: 'Diluted Band',
-		site: 'http://www.dilutedband.com',
+		site: 'https://www.dilutedband.com',
 		actionLink: 'https://github.com/tylercreller/diluted-band',
 		tech: reactIcon
 	},
 	{
 		img: 'images/exposure.png',
 		title: 'Get Paid in Exposure!',
-		site: 'http://www.paid-in-exposure.com',
+		site: 'https://www.paid-in-exposure.com',
 		tech: reactIcon
 	}
 ];
