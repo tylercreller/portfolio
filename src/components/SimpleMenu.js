@@ -66,7 +66,7 @@ class SimpleMenu extends React.Component {
 						className={this.props.itemClassName}
 						onClick={this.handleItemClick.bind(
 							this,
-							'Tyler_Creller_Resume_Basic.pdf'
+							'Tyler_Creller_Resume.pdf'
 						)}
 					>
 						Resume
