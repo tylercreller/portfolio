@@ -4,8 +4,7 @@ html {
 }
 
 body {
-	background-color: $primary-color-1;
-	background-image: $topography;
+	background: $primary-color-1 url('../../public/images/topography.svg');
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: $m-size;
 
