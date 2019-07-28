@@ -4,6 +4,8 @@ node_js:
 warnings_are_errors: false
 install:
   - yarn
+before_script:
+  - npm install firebase-tools -g
 script:
   - yarn build:prod
-  - firebase deploy --token $FIREBASE_DEPLOY_KEY
+  - firebase deploy --only hosting --token $FIREBASE_DEPLOY_KEY
