@@ -6,4 +6,4 @@ install:
   - yarn
 script:
   - yarn build:prod
-deploy: firebase deploy --token $FIREBASE_DEPLOY_KEY
+  - firebase deploy --token $FIREBASE_DEPLOY_KEY
