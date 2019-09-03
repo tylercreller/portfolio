@@ -12,11 +12,15 @@
 	margin-bottom: 10px;
 }
 .projects__tile img {
+	filter: grayscale(100%);
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	&.shift-right {
 		object-position: 0;
+	}
+	&:hover {
+		filter: grayscale(0);
 	}
 }
 .project-title {
