@@ -74,7 +74,7 @@ export default class Contact extends React.Component {
 	};
 
 	displayRequired = () => {
-		return <p className="contact__card__content__helper-text">Required</p>;
+		return <p className='contact__card__content__helper-text'>Required</p>;
 	};
 
 	componentDidMount() {
@@ -92,48 +92,46 @@ export default class Contact extends React.Component {
 
 	render() {
 		return (
-			<div className="contact" data-aos="fade-in">
-				<div className="large-text">
-					Let's <div className="large-text--yellow">Chat</div>.
-				</div>
-				<div className="contact__card">
-					<div className="contact__card__content">
-						<form noValidate autoComplete="off">
-							<div className="contact__card__content__name">
-								<label htmlFor="name">Name *</label>
+			<div className='contact' data-aos='fade-in'>
+				<div className='title-text'>Let's Chat.</div>
+				<div className='contact__card'>
+					<div className='contact__card__content'>
+						<form noValidate autoComplete='off'>
+							<div className='contact__card__content__name'>
+								<label htmlFor='name'>Name *</label>
 								<input
-									id="name"
-									className="contact__card__content__input"
+									id='name'
+									className='contact__card__content__input'
 									value={this.state.from_name}
 									onChange={this.handleChange('from_name')}
-									autoComplete="name"
+									autoComplete='name'
 									required
 								/>
 								{this.state.isDirty &&
 									!this.state.from_name &&
 									this.displayRequired()}
 							</div>
-							<div className="contact__card__content__email">
-								<label htmlFor="email">Email *</label>
+							<div className='contact__card__content__email'>
+								<label htmlFor='email'>Email *</label>
 								<input
-									id="email"
-									className="contact__card__content__input"
+									id='email'
+									className='contact__card__content__input'
 									value={this.state.reply_to}
 									onChange={this.handleChange('reply_to')}
-									type="email"
-									autoComplete="email"
+									type='email'
+									autoComplete='email'
 									required
 								/>
 								{this.state.isDirty &&
 									!this.state.reply_to &&
 									this.displayRequired()}
 							</div>
-							<div className="contact__card__content__message">
-								<label htmlFor="message">Message *</label>
+							<div className='contact__card__content__message'>
+								<label htmlFor='message'>Message *</label>
 								<textarea
-									id="mesage"
-									rows="8"
-									className="contact__card__content__input"
+									id='mesage'
+									rows='8'
+									className='contact__card__content__input'
 									value={this.state.message_html}
 									onChange={this.handleChange('message_html')}
 									required
@@ -144,13 +142,13 @@ export default class Contact extends React.Component {
 							</div>
 						</form>
 						<div
-							id="g-recaptcha"
-							className="g-recaptcha"
+							id='g-recaptcha'
+							className='g-recaptcha'
 							style={{ width: '100%' }}
 						/>
 						<button
-							className="contact__button"
-							size="large"
+							className='contact__button'
+							size='large'
 							onClick={this.sendEmail}
 						>
 							SEND

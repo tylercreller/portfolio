@@ -1,28 +1,29 @@
-import React from 'react';
-
-const angularIcon = (
-	<i className="fab fa-angular fa-3x" title="Built with AngularJS" />
-);
-const reactIcon = <i className="fab fa-react fa-3x" title="Built with React" />;
-
 export default [
+	{
+		img: 'images/terminal.png',
+		title: 'Unsubscribe Terminal',
+		site: 'https://unsubscribe.dilutedband.com',
+		desc: 'Terminal based web experience for Diluted.',
+		class: 'shift-right'
+	},
 	{
 		img: 'images/flex-dashboard-flat.jpg',
 		title: 'Paychex Flex ©',
 		site: 'https://myapps.paychex.com',
-		tech: angularIcon
+		desc:
+			"Paychex's HR/PayrollP SaaS offering. Flex services over 650,000 companies and 1 in 12 employees in the private sector."
 	},
 	{
 		img: 'images/diluted-min.png',
 		title: 'Diluted Band',
 		site: 'https://www.dilutedband.com',
-		actionLink: 'https://github.com/tylercreller/diluted-band',
-		tech: reactIcon
+		desc: 'Site for Rochetster, NY Alternative Metal Band.'
 	},
 	{
 		img: 'images/exposure.png',
 		title: 'Paid in Exposure',
 		site: 'https://www.paid-in-exposure.com',
-		tech: reactIcon
+		desc:
+			'A satire passion project to help artists and content creators convert exposure to cash!'
 	}
 ];

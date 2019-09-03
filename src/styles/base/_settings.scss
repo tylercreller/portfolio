@@ -9,7 +9,7 @@ $warning-color: #f4032f;
 // Sleek Theme
 $primary-color-1: #2d3436;
 $primary-color-2: #d63031;
-$primary-color-3: #ecf0f1;
+$primary-color-3: #ffffff;
 
 // Spacing
 $xs-size: 1rem;
@@ -24,11 +24,9 @@ $small-phone-breakpoint: 50rem;
 $max-content-width: 75rem;
 
 // Fonts
-$font-family-content: 'Roboto', sans-serif;
-$font-family-title: 'Fredoka One', sans-serif;
+$font-family-content: 'Open Sans', sans-serif;
+$font-family-title: 'Montserrat', sans-serif;
 
 // Effects
 $bezel-effect-blue: 0.3rem solid darken($primary-color-1, 20%);
 $bezel-effect-white: 0.3rem solid darken($primary-color-3, 10%);
-$text-shadow: 0.6rem 0.6rem 0 darken($primary-color-1, 10%);
-$box-shadow: 0.6rem 0.6rem 0 darken($primary-color-1, 10%);

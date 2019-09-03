@@ -4,7 +4,7 @@ html {
 }
 
 body {
-	background: $primary-color-1 url('../../public/images/topography.svg');
+	background: $primary-color-3;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: $m-size;
 
@@ -25,24 +25,16 @@ button:disabled {
 	cursor: default;
 }
 
-.large-text {
-	color: $primary-color-3;
-
-	font-size: $gigantic-size;
-	font-family: $font-family-title;
-	text-shadow: $text-shadow;
-
-	margin-bottom: $l-size;
+.title-text {
+	color: $primary-color-1;
+	font-size: $m-size;
+	font-family: $font-family-content;
+	margin-bottom: $m-size;
 	user-select: none;
-
+	font-weight: bold;
 	a {
 		color: $primary-color-2;
 	}
-}
-
-.large-text--yellow {
-	color: $primary-color-2;
-	display: inline;
 }
 
 .swal2-popup {
@@ -50,11 +42,10 @@ button:disabled {
 }
 
 .menu-text {
-	font-family: $font-family-content !important;
+	font-family: $font-family-title !important;
 	font-weight: 1000 !important;
-	letter-spacing: 0.2rem !important;
 	font-size: $m-size !important;
-	color: $primary-color-3;
+	color: $primary-color-1;
 	text-decoration: none !important;
 	user-select: none !important;
 	&:hover {

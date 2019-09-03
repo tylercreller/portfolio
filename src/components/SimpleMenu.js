@@ -16,18 +16,17 @@ const SimpleMenu = props => {
 		};
 
 	return (
-		<div className="simple-menu">
+		<div className='simple-menu'>
 			<div
 				className={props.className + ' ' + props.itemClassName}
 				aria-owns={anchorEl ? 'simple-menu' : undefined}
-				aria-haspopup="true"
+				aria-haspopup='true'
 				onClick={handleClick}
 			>
-				More
-				<i className="fas fa-chevron-circle-down fa-xs" />
+				more <i className='fas fa-chevron-circle-down fa-xs' />
 			</div>
 			<Menu
-				id="simple-menu"
+				id='simple-menu'
 				anchorEl={anchorEl}
 				open={Boolean(anchorEl)}
 				onClose={handleClose}
@@ -39,7 +38,7 @@ const SimpleMenu = props => {
 						'https://github.com/tylercreller'
 					)}
 				>
-					GitHub
+					github
 				</MenuItem>
 				<MenuItem
 					className={props.itemClassName}
@@ -48,13 +47,13 @@ const SimpleMenu = props => {
 						'https://www.linkedin.com/in/tyler-creller/'
 					)}
 				>
-					LinkedIn
+					linkedIn
 				</MenuItem>
 				<MenuItem
 					className={props.itemClassName}
 					onClick={handleItemClick.bind(this, 'Tyler_Creller_Resume.pdf')}
 				>
-					Resume
+					resume
 				</MenuItem>
 			</Menu>
 		</div>

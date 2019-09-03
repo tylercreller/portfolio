@@ -26,16 +26,11 @@
 .contact__card {
 	margin: 0;
 	text-align: initial;
-	border-radius: $s-size;
-	box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px,
-		rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2;
 }
 
 .contact__card__content {
 	background: $primary-color-3;
 	border-radius: $s-size;
-	padding: $m-size $m-size;
-	box-shadow: $box-shadow;
 }
 .contact__card__content__name {
 	float: left;

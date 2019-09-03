@@ -1,7 +1,17 @@
 .navigation {
+	padding: $l-size $l-size $l-size 20%;
+}
+.tagline {
+	font-family: $font-family-content;
+	font-size: $s-size;
+	color: lighten($primary-color-1, 30%);
+}
+.navigation__links {
 	display: flex;
 	flex-wrap: wrap;
-	padding: $m-size $l-size $m-size 20%;
+	justify-content: flex-end;
+	width: 100%;
+	float: right;
 }
 .navigation__link {
 	user-select: none;
@@ -34,9 +44,13 @@
 	}
 }
 
+.menu-name {
+	white-space: nowrap;
+}
+
 @media (max-width: $desktop-breakpoint) {
 	.navigation {
-		padding: $m-size $s-size;
+		padding: $l-size $s-size;
 		justify-content: center;
 	}
 
@@ -47,6 +61,6 @@
 
 @media screen and (min-width: $small-phone-breakpoint) {
 	.navigation {
-		padding: $m-size 15% $m-size 15%;
+		padding: $l-size 15% $l-size 15%;
 	}
 }
