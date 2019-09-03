@@ -4,7 +4,7 @@ import gridListData from '../data/gridListData';
 class ProjectsV2 extends React.Component {
 	render() {
 		return (
-			<div className='projects' data-aos='fade-in'>
+			<div className='projects'>
 				<div className='title-text'>Latest projects</div>
 				<div className='projects-list'>
 					{gridListData.map(tile => (

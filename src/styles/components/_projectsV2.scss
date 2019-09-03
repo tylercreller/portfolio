@@ -1,6 +1,3 @@
-.projects {
-	transform: translate(-50%, -50%);
-}
 .projects-list {
 	display: flex;
 	justify-content: space-between;
@@ -36,6 +33,10 @@
 			color: $primary-color-2;
 		}
 	}
+}
+.project-desc {
+	font-family: $font-family-content;
+	color: $primary-color-1;
 }
 @media screen and (max-width: $small-phone-breakpoint) {
 	.projects__tile {

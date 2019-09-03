@@ -92,7 +92,7 @@ export default class Contact extends React.Component {
 
 	render() {
 		return (
-			<div className='contact' data-aos='fade-in'>
+			<div className='contact'>
 				<div className='title-text'>Let's Chat.</div>
 				<div className='contact__card'>
 					<div className='contact__card__content'>
