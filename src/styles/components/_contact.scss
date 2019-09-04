@@ -4,9 +4,9 @@
 
 .contact__button {
 	font-family: $font-family-content;
-	background: $primary-color-1;
+	background: darken($primary-color-3, 50%);
 	border: none;
-	border-bottom: $bezel-effect-blue;
+	border-bottom: $bezel-effect-white;
 	border-radius: 4px;
 	margin: $s-size $s-size 0 0;
 	min-width: 15rem;
@@ -17,8 +17,8 @@
 	font-size: $m-size;
 
 	&:hover {
-		background: darken($primary-color-1, 20%);
-		border-bottom: darken($primary-color-1, 100%);
+		background: darken($primary-color-3, 80%);
+		border-bottom: darken($primary-color-3, 100%);
 	}
 }
 
@@ -62,7 +62,7 @@ form {
 	textarea {
 		display: inline-block;
 		color: rgba(0, 0, 0, 0.87);
-		border: 1px solid darken($primary-color-3, 10%);
+		border: 1px solid $primary-color-1;
 		border-radius: 4px;
 		padding: $s-size $xs-size;
 		margin-right: $m-size;
@@ -78,13 +78,13 @@ form {
 	label,
 	input,
 	textarea {
-		font-family: $font-family-content;
+		font-family: $font-family-title;
 		font-size: $m-size;
 		line-height: $m-size;
 	}
 
 	.contact__card__content__helper-text {
-		font-family: $font-family-content;
+		font-family: $font-family-title;
 		font-size: $s-size;
 		color: $warning-color;
 		margin: 3px 0;

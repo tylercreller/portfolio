@@ -98,7 +98,7 @@ export default class Contact extends React.Component {
 					<div className='contact__card__content'>
 						<form noValidate autoComplete='off'>
 							<div className='contact__card__content__name'>
-								<label htmlFor='name'>Name *</label>
+								<label htmlFor='name'>name *</label>
 								<input
 									id='name'
 									className='contact__card__content__input'
@@ -112,7 +112,7 @@ export default class Contact extends React.Component {
 									this.displayRequired()}
 							</div>
 							<div className='contact__card__content__email'>
-								<label htmlFor='email'>Email *</label>
+								<label htmlFor='email'>email *</label>
 								<input
 									id='email'
 									className='contact__card__content__input'
@@ -127,7 +127,7 @@ export default class Contact extends React.Component {
 									this.displayRequired()}
 							</div>
 							<div className='contact__card__content__message'>
-								<label htmlFor='message'>Message *</label>
+								<label htmlFor='message'>message *</label>
 								<textarea
 									id='mesage'
 									rows='8'
@@ -151,7 +151,7 @@ export default class Contact extends React.Component {
 							size='large'
 							onClick={this.sendEmail}
 						>
-							SEND
+							send
 						</button>
 					</div>
 				</div>
