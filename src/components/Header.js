@@ -12,10 +12,10 @@ const Header = () => (
 		</a>
 		<div className="header__icons">
 			<a href="https://github.com/tylercreller">
-				<i class="fab fa-github fa-lg"></i>
+				<i className="fab fa-github fa-lg"></i>
 			</a>
 			<a href="https://linkedin.com/in/tyler-creller/">
-				<i class="fab fa-linkedin-in fa-lg"></i>
+				<i className="fab fa-linkedin-in fa-lg"></i>
 			</a>
 		</div>
 	</div>
