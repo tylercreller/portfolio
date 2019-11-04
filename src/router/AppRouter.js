@@ -18,7 +18,7 @@ export default class Layout extends React.Component {
 						params={{
 							particles: {
 								number: {
-									value: 200,
+									value: 100,
 									density: {
 										enable: true,
 										value_area: 1500
