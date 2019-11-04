@@ -1,0 +1,57 @@
+.header {
+	padding: $l-size $l-size $l-size 20%;
+	text-align: center;
+
+	> * {
+		margin: 0.5rem;
+	}
+
+	&__icons i {
+		color: $primary-color-1;
+		margin: 0.5rem;
+		&:hover {
+			color: $primary-color-2;
+			cursor: pointer;
+		}
+	}
+
+	&__avatar {
+		width: 20rem;
+		height: 20rem;
+		border-radius: 50%;
+	}
+
+	&__email {
+		font-size: $s-size;
+		color: $primary-color-1;
+		font-family: $font-family-content;
+		&:hover {
+			color: $primary-color-2;
+		}
+	}
+}
+.tagline {
+	font-family: $font-family-content;
+	font-size: $s-size;
+	color: $primary-color-1;
+}
+.header__links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	width: 100%;
+	float: right;
+}
+
+@media (max-width: $desktop-breakpoint) {
+	.header {
+		padding: $l-size $s-size;
+		justify-content: center;
+	}
+}
+
+@media screen and (min-width: $small-phone-breakpoint) {
+	.header {
+		padding: $l-size 15% $l-size 15%;
+	}
+}

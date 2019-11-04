@@ -7,24 +7,23 @@ class ProjectsV2 extends React.Component {
 	};
 	render() {
 		return (
-			<div className='projects'>
-				<div className='title-text'>Latest projects</div>
-				<div className='projects-list'>
+			<div className="projects">
+				<div className="projects-list">
 					{gridListData.map(tile => (
-						<div className='projects__tile' key={tile.img}>
-							<div className='projects-image-crop'>
+						<div className="projects__tile" key={tile.img}>
+							<div className="projects-image-crop">
 								<img
 									className={tile.class}
 									src={tile.img}
 									onClick={this.handleClick.bind(null, tile.site)}
 								></img>
 							</div>
-							<div className='project-title'>
-								<a href={tile.site} target='_blank' rel='noreferrer'>
+							<div className="project-title">
+								<a href={tile.site} target="_blank" rel="noreferrer">
 									{tile.title}
 								</a>
 							</div>
-							<div className='project-desc'>{tile.desc}</div>
+							<div className="project-desc">{tile.desc}</div>
 						</div>
 					))}
 				</div>

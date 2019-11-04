@@ -4,7 +4,9 @@
 	flex-wrap: wrap;
 }
 .projects__tile {
-	margin-bottom: 30px;
+	width: 32%;
+	padding-bottom: 2%; /* 32:18, i.e. 16:9 */
+	margin-bottom: 2%; /* (100-32*3)/2 */
 }
 .projects-image-crop {
 	width: 100%;
@@ -12,7 +14,6 @@
 	margin-bottom: 10px;
 }
 .projects__tile img {
-	filter: grayscale(35%);
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -22,6 +23,7 @@
 	&:hover {
 		cursor: pointer;
 	}
+	border-radius: 8px;
 }
 .project-title {
 	margin-bottom: $s-size;
@@ -40,6 +42,7 @@
 }
 .project-desc {
 	font-family: $font-family-content;
+	font-size: $s-size;
 	color: lighten($primary-color-1, 10%);
 }
 @media screen and (max-width: $small-phone-breakpoint) {

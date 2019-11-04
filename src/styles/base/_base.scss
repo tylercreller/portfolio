@@ -38,10 +38,6 @@ button:disabled {
 	}
 }
 
-.swal2-popup {
-	font-size: 1.6rem !important;
-}
-
 .menu-text {
 	font-family: $font-family-title !important;
 	font-weight: 1000 !important;
@@ -49,10 +45,6 @@ button:disabled {
 	color: $primary-color-1;
 	text-decoration: none !important;
 	user-select: none !important;
-	&:hover {
-		color: $primary-color-2 !important;
-		cursor: pointer !important;
-	}
 }
 
 @media screen and (max-width: $desktop-breakpoint) {

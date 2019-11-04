@@ -24,6 +24,6 @@ export default [
 		img: 'images/diluted-min.png',
 		title: 'Diluted Band',
 		site: 'https://www.dilutedband.com',
-		desc: 'Site for Rochetster, NY Alternative Metal Band.'
+		desc: 'Site for Rochester, NY Alternative Metal Band.'
 	}
 ];
