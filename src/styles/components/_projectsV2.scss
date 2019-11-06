@@ -25,7 +25,7 @@
 	}
 	border-radius: 8px;
 }
-.project-title {
+.projects__title {
 	margin-bottom: $s-size;
 
 	a {
@@ -40,10 +40,20 @@
 		}
 	}
 }
-.project-desc {
+.projects__desc {
 	font-family: $font-family-content;
 	font-size: $s-size;
 	color: lighten($primary-color-1, 10%);
+}
+.projects__role {
+	font-family: $font-family-content;
+	font-size: $s-size;
+	color: $primary-color-2;
+}
+.projects__stack {
+	font-family: $font-family-content;
+	font-size: $s-size;
+	color: $primary-color-1;
 }
 @media screen and (max-width: $small-phone-breakpoint) {
 	.projects__tile {

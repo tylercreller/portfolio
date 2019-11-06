@@ -4,26 +4,36 @@ export default [
 		title: 'Paychex Flex ©',
 		site: 'https://myapps.paychex.com',
 		desc:
-			"Paychex's HR/PayrollP SaaS offering. Flex services over 650,000 companies and 1 in 12 employees in the private sector."
+			"Paychex's HR/Payroll SaaS application. Flex services over 650,000 companies and 1 in 12 employees in the private sector. I saw through the project from beta to release - with continued support and development of new features",
+		role: 'Full Stack Software Engineer',
+		stack: 'AngularJS, Java, ReactJS'
 	},
 	{
 		img: 'images/exposure.png',
 		title: 'Paid in Exposure',
 		site: 'https://www.paid-in-exposure.com',
 		desc:
-			'A satire passion project to help artists and content creators convert exposure to cash!'
+			'A satire passion project to help artists and content creators convert exposure to cash! Complete with sharable links for specific generated text and selected currency.',
+		role: 'Personal Project',
+		stack: 'ReactJS, Firebase'
 	},
 	{
 		img: 'images/terminal.png',
 		title: 'Unsubscribe Terminal',
 		site: 'https://unsubscribe.dilutedband.com',
-		desc: 'Terminal based web experience for Diluted.',
-		class: 'shift-right'
+		desc:
+			'A unique computer terminal-like web experience for Diluted\'s EP "Unsubscribe." Enter commands to see what mystery lies beyond.',
+		class: 'shift-right',
+		role: 'Design & Development',
+		stack: 'ReactJS, Firebase'
 	},
 	{
 		img: 'images/diluted-min.png',
 		title: 'Diluted Band',
 		site: 'https://www.dilutedband.com',
-		desc: 'Site for Rochester, NY Alternative Metal Band.'
+		desc:
+			'Artist site for Diluted. Mixed media with embedded videos, images, and songkick widget integration.',
+		role: 'Design & Development',
+		stack: 'ReactJS, Firebase'
 	}
 ];

@@ -18,12 +18,15 @@ class ProjectsV2 extends React.Component {
 									onClick={this.handleClick.bind(null, tile.site)}
 								></img>
 							</div>
-							<div className="project-title">
+							<div className="projects__title">
 								<a href={tile.site} target="_blank" rel="noreferrer">
 									{tile.title}
 								</a>
+								<div className="projects__role">{tile.role}</div>
+								<div className="projects__stack">{tile.stack}</div>
 							</div>
-							<div className="project-desc">{tile.desc}</div>
+							<div className="projects__desc">{tile.desc}</div>
+							<br></br>
 						</div>
 					))}
 				</div>
