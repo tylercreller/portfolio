@@ -26,7 +26,6 @@ class ProjectsV2 extends React.Component {
 								<div className="projects__stack">{tile.stack}</div>
 							</div>
 							<div className="projects__desc">{tile.desc}</div>
-							<br></br>
 						</div>
 					))}
 				</div>
