@@ -3,6 +3,12 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
+
+.projects__title,
+.projects__role,
+.projects__stack {
+	margin: 0.2rem 0;
+}
 .projects__tile {
 	width: 32%;
 	padding-bottom: 2%; /* 32:18, i.e. 16:9 */
@@ -10,8 +16,8 @@
 }
 .projects-image-crop {
 	width: 100%;
-	height: 250px;
-	margin-bottom: 10px;
+	height: 25rem;
+	margin-bottom: 1rem;
 }
 .projects__tile img {
 	width: 100%;
@@ -23,7 +29,7 @@
 	&:hover {
 		cursor: pointer;
 	}
-	border-radius: 8px;
+	border-radius: 0.8rem;
 }
 .projects__title {
 	margin-bottom: $s-size;
@@ -41,9 +47,10 @@
 	}
 }
 .projects__desc {
+	line-height: 1.6rem;
 	font-family: $font-family-content;
 	font-size: $s-size;
-	color: lighten($primary-color-1, 10%);
+	color: $primary-color-1;
 }
 .projects__role {
 	font-family: $font-family-content;

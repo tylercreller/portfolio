@@ -4,7 +4,7 @@ export default [
 		title: 'Paychex Flex ©',
 		site: 'https://myapps.paychex.com',
 		desc:
-			"Paychex's HR/Payroll SaaS application. Flex services over 650,000 companies and 1 in 12 employees in the private sector. I saw through the project from beta to release - with continued support and development of new features",
+			"Paychex's HR/Payroll SaaS application. Flex services over 670,000 companies and 1 in 12 employees in the private sector. I saw through the project from beta to release - with continued support and development of new features. This app services ~2 million users per quarter - with my team's application serving ~7.5 million accesses.",
 		role: 'Full Stack Software Engineer',
 		stack: 'AngularJS, Java, ReactJS'
 	},
