@@ -18,7 +18,7 @@ const Header = () => (
 			<a href='https://linkedin.com/in/tyler-creller/' target='_blank'>
 				<i className='fab fa-linkedin-in fa-lg'></i>
 			</a>
-			<a href='https://www.instagram.com/_tycrell/' target='_blank'>
+			<a href='https://www.instagram.com/_ty.js/' target='_blank'>
 				<i className='fab fa-instagram fa-lg'></i>
 			</a>
 		</div>
