@@ -4,10 +4,7 @@ const Header = () => (
 	<div className='header'>
 		<img className='header__avatar' src='images/avatar.png'></img>
 		<div className='menu-name menu-text'>tyler creller.</div>
-		<div className='tagline'>
-			dog dad, musician, and full stack engineer specializing in front-end
-			development.
-		</div>
+		<div className='tagline'>dog dad, musician, and full stack engineer.</div>
 		<a className='header__email' href='mailto:tylercreller@gmail.com'>
 			tylercreller@gmail.com
 		</a>

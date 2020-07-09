@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Container from '../components/Container';
 import NotFoundPage from '../components/NotFoundPage';
-import Projects from '../components/ProjectsV2';
+import Projects from '../components/ProjectsV3';
 
 export default class Layout extends React.Component {
 	render() {
@@ -17,6 +17,9 @@ export default class Layout extends React.Component {
 						style={{ position: 'fixed', zIndex: -1 }}
 						params={{
 							particles: {
+								color: {
+									value: '#ffffff'
+								},
 								number: {
 									value: 100,
 									density: {
@@ -26,11 +29,18 @@ export default class Layout extends React.Component {
 								},
 								line_linked: {
 									enable: true,
-									opacity: 0.05
+									opacity: 0.1,
+									width: 0.5,
+									distance: 192,
+									shadow: {
+										enable: true,
+										color: '#6c5ce7',
+										blur: 5
+									}
 								},
 								move: {
-									direction: 'right',
-									speed: 0.05
+									direction: 'bottom-right',
+									speed: 2
 								},
 								size: {
 									value: 1
@@ -49,7 +59,7 @@ export default class Layout extends React.Component {
 					<Header />
 					<Container>
 						<Switch>
-							<Route path="/" component={Projects} exact={true} />
+							<Route path='/' component={Projects} exact={true} />
 							<Route component={NotFoundPage} />
 						</Switch>
 					</Container>

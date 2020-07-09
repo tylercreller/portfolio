@@ -1,17 +1,17 @@
 .container {
-	padding: $xl-size 20% 0 20%;
+	padding: $xl-size 10% 0 10%;
 }
 
 @media screen and (max-width: $desktop-breakpoint) {
 	.container {
 		padding: $xs-size $xs-size $xl-size $xs-size;
-		text-align: center;
+		// text-align: center;
 		margin: 0 auto $xxl-size;
 	}
 }
 
 @media screen and (min-width: $small-phone-breakpoint) {
 	.container {
-		padding: $m-size 15% 10% 15%;
+		padding: $m-size 5% 10% 5%;
 	}
 }
