@@ -1,7 +1,6 @@
 html {
 	font-size: 62.5%;
 	height: 100%;
-	overflow-y: scroll;
 }
 
 body {
@@ -38,24 +37,17 @@ button:disabled {
 	}
 }
 
-.menu-text {
+.hero-text {
 	font-family: $font-family-title !important;
-	font-weight: 1000 !important;
-	font-size: $m-size !important;
+	font-size: 3vw !important;
 	color: $primary-color-1;
 	text-decoration: none !important;
 	user-select: none !important;
+	letter-spacing: 0.03em;
 }
 
 @media screen and (max-width: $desktop-breakpoint) {
-	.large-text {
-		font-size: $xxl-size;
-	}
-}
-
-@media screen and (max-width: $small-phone-breakpoint) {
-	.large-text {
-		font-size: $xl-size;
-		margin-bottom: $m-size;
+	.hero-text {
+		font-size: 6vw !important;
 	}
 }
