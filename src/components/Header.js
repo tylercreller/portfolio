@@ -10,6 +10,7 @@ const Header = () => (
 				<span>cloud developer</span>
 				<span>dog dad</span>
 				<span>video game enthusiast</span>
+				<span>serial hobbyist</span>
 			</TextLoop>
 			{'.'}
 		</div>
