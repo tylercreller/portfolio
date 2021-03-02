@@ -11,6 +11,7 @@ const Header = () => (
 				<span>dog dad</span>
 				<span>video game enthusiast</span>
 				<span>serial hobbyist</span>
+				<span>remote-work advocate</span>
 			</TextLoop>
 			{'.'}
 		</div>
