@@ -1,13 +1,16 @@
 .header {
 	text-align: left;
 
-	> * {
+	.hero-text,
+	.header__icons,
+	.hero-text__tagline {
 		margin-bottom: 3rem;
 		user-select: none;
 	}
 
 	.hero-text__tagline {
 		font-family: $font-family-title;
+		color: $primary-color-1;
 		&__company {
 			color: $primary-color-1;
 		}
