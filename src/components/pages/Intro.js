@@ -110,9 +110,3 @@ const Intro = () => {
   );
 };
 export default Intro;
-
-// onClick={() => onTap()}
-// onContextMenu={e => {
-//   e.preventDefault();
-//   onTap();
-// }}
