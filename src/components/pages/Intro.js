@@ -84,12 +84,12 @@ const Intro = () => {
         </a>
       </div>
       <div className="comment hero-text__tagline">
-        {' // I currently work at'}{' '}
+        {' // I am currently'}{' '}
         <a
           className="comment hero-text__tagline__company"
-          href="https://www.devcoredigital.com/"
+          href="https://docs.google.com/document/d/1anfDrgbiZKz3xpwbmiiurQ4dfSxi9k7QrxlkS5GQ-_4/edit?usp=sharing"
           target="_blank">
-          DevCore Digital Services
+          looking for my next opportunity!
         </a>
       </div>
       <span
