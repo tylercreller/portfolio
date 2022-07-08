@@ -51,7 +51,7 @@ const Intro = () => {
             {location}
           </motion.span>
         </AnimatePresence>{' '}
-        based full-stack javascript engineer, and{' '}
+        based full-stack software engineer, and{' '}
         <span className="tag">
           {'{'}
           <span className="string">{"'"}</span>
@@ -87,7 +87,7 @@ const Intro = () => {
         {' // I currently work at Paychex.'}{' '}
         <a
           className="comment hero-text__tagline__company"
-          href="https://www.paychex.com/careers/it-careers"
+          href="https://www.paychex.com/careers/it"
           target="_blank">
           We're hiring!
         </a>
