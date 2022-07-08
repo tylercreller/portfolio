@@ -87,7 +87,7 @@ const Intro = () => {
         {' // I currently work at Paychex.'}{' '}
         <a
           className="comment hero-text__tagline__company"
-          href="https://www.paychex.com/careers/it"
+          href="https://careers.paychex.com/it"
           target="_blank">
           We're hiring!
         </a>
