@@ -17,7 +17,7 @@ const Intro = () => {
     onExitLocation();
   };
 
-  const onHoverLocation = e => {
+  const onHoverLocation = (e) => {
     if (hasLocationError) {
       const tooltipSpan = document.getElementById('tooltipSpan');
       const x = e.clientX,
@@ -29,7 +29,7 @@ const Intro = () => {
   };
   const debounceHover = _debounce(onHoverLocation, 300);
 
-  const onExitLocation = e => {
+  const onExitLocation = (e) => {
     e && e.preventDefault();
     const tooltipSpan = document.getElementById('tooltipSpan');
     tooltipSpan.style.display = 'none';
@@ -43,7 +43,7 @@ const Intro = () => {
         <AnimatePresence>
           <motion.span
             id="autocorrectLocation"
-            onMouseEnter={e => {
+            onMouseEnter={(e) => {
               e.persist();
               debounceHover(e);
             }}
@@ -58,7 +58,7 @@ const Intro = () => {
           <TextLoop mask={true}>
             <span className="string">cloud architect</span>
             <span className="string">dog dad</span>
-            <span className="string">video game enthusiast</span>
+            <span className="string">gamer</span>
             <span className="string">serial hobbyist</span>
             <span className="string">remote-work advocate</span>
             <span className="string">fpv pilot</span>
@@ -84,10 +84,10 @@ const Intro = () => {
         </a>
       </div>
       <div className="comment hero-text__tagline">
-        {' // I currently work at Paychex.'}{' '}
+        {' // I currently work at Red Hat.'}{' '}
         <a
           className="comment hero-text__tagline__company"
-          href="https://careers.paychex.com/it"
+          href="https://www.redhat.com/en/jobs"
           target="_blank">
           We're hiring!
         </a>
@@ -101,7 +101,7 @@ const Intro = () => {
             Unknown property: 'upstate new york'{' '}
             <span className="tooltip-hint">covid-19 (unknownProperties)</span>
           </span>
-          <span className="tooltip-footer" onClick={e => handleLocation(e)}>
+          <span className="tooltip-footer" onClick={(e) => handleLocation(e)}>
             Quick fix
           </span>
         </span>
